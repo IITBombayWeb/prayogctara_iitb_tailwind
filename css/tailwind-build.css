@@ -555,6 +555,40 @@ video {
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 h1{
   font-size: 3.75rem;
   line-height: 1;
@@ -698,6 +732,11 @@ h6{
 
 .col-span-2 {
   grid-column: span 2 / span 2;
+}
+
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mx-auto {
@@ -908,6 +947,10 @@ h6{
   flex-direction: column;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -1012,6 +1055,16 @@ h6{
   border-color: rgba(39, 142, 179, var(--tw-border-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.bg-gray-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
+}
+
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
@@ -1058,6 +1111,10 @@ h6{
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-7 {
@@ -1122,6 +1179,11 @@ h6{
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.py-56 {
+  padding-top: 14rem;
+  padding-bottom: 14rem;
 }
 
 .pt-10 {
@@ -1221,6 +1283,10 @@ h6{
 
 .italic {
   font-style: italic;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
 }
 
 .leading-none {
@@ -1374,6 +1440,10 @@ h6{
     font-size: 3rem;
     line-height: 1;
   }
+
+  .sm\:leading-none {
+    line-height: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1438,6 +1508,10 @@ h6{
     flex-direction: row;
   }
 
+  .md\:p-20 {
+    padding: 5rem;
+  }
+
   .md\:px-24 {
     padding-left: 6rem;
     padding-right: 6rem;
@@ -1446,6 +1520,11 @@ h6{
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 }
 
