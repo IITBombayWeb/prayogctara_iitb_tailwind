@@ -1,0 +1,8 @@
+# ctara_prayog_tailwindcss.libraries.yml
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/tailwind-build.css: {}
+  js:
+    js/tailwindcss.js: {}    

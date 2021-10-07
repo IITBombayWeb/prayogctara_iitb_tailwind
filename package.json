@@ -1,0 +1,22 @@
+{
+  "name": "ctara-prayog-tailwind-theme",
+  "version": "1.0.0",
+  "description": "Prayog Project at Ctara Center IIT-Bombay Website Theme.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [
+    "Prayog",
+    "Ctara",
+    "IITBombay"
+  ],
+  "author": "Tejas Shah @tdnshah",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "autoprefixer": "^10.3.6",
+    "postcss": "^8.3.8",
+    "tailwindcss": "^2.2.16",
+    "vite": "^2.6.2"
+  }
+}
