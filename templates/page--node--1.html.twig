@@ -11,135 +11,165 @@
 
 {% include '@ctara_prayog_tailwindcss_theme/header.html.twig' %}
 
-    <section class="relative py-10">
-        <div class="">
-            <div class="flex flex-col md:flex-row gap-4 mb-24 mt-20">
-                <div class="relative w-full md:w-8/12">
-                    <div class="ml-40">
-                        <div class="sm:text-center lg:text-left">
-                            <h2 class="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-xl 2xl:text-4xl">
-                            <span class="block">Building transformational delivery</span>
-                            <span class="block">targeted at providing solutions for</span>
-                            <span class="block">the country’s development.</span>
-                            </h2>
-                            <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:mx-auto md:ml-20 md:mt-5 md:mr-20 md:max-w-sm 2xl:text-lg">
-                            The world is facing multifaceted challenges in the 21st century. Academic institutions can play a crucial role in addressing some of these challenges be they on issues related to economic and gender inequalities, resource scarcity or climate change.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full md:w-4/12">
-                    <img class="h-32 w-full object-cover sm:h-72 md:h-96 lg:w-full rounded-bl-2xl rounded-tl-2xl roun" src="{{ base_path ~ directory }}/assets/images/about_us/misc/about-us-banner.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="">
-            <div class="flex flex-col md:flex-row mb-24 mt-20">
-                <div class="relative w-full md:w-7/12 bg-gray-800 rounded-br-2xl rounded-tr-2xl">
-                <div class="ml-40">
-                    <div class="sm:text-center lg:text-left pt-10">
-                    <h2 class=" text-white text-2xl tracking-tight font-extrabold sm:text-5xl md:text-xl 2xl:text-5xl">
-                        Our Mission
+<section class="bg-pryg-white-v1 py-32">
+    <div class="">
+        <div class="grid grid-cols-12">
+            <div class="col-span-7 py-20 relative">
+                <div class="sm:text-center lg:text-left mx-60">
+                    <h2 class="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-xl 2xl:text-4xl">
+                        Building transformational delivery targeted at providing solutions for the country’s development.
                     </h2>
-                    <p class="mt-3 text-base text-gray-200 sm:mt-5 md:max-w-sm md:mt-5 2xl:text-xl">
-                        Become the first port of call for all development problems and be firmly engaged with society to provide innovative technological solutions through multi-stakeholder collaborative association.
+                </div>
+                <div>
+                    <p class="sm:text-center lg:text-left text-xl tracking-wide mx-60 p-16">
+                        The world is facing multifaceted challenges in the 21st century. Academic institutions can play a crucial role in addressing some of these challenges be they on issues related to economic and gender inequalities, resource scarcity or climate change.
                     </p>
-                    </div>
                 </div>
+                    <div class="px-10 absolute bottom-14 left-32">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="81px" viewBox="-0.5 -0.5 81 81" style="max-width:100%;max-height:81px;"><defs/><g><path d="M 27.47 4.78 Q 61.69 4.78 61.69 33.08 Q 61.69 61.38 27.47 61.38 Z" fill="#f8bc28" stroke="none" transform="rotate(-135,44.58,33.08)" pointer-events="none"/><ellipse cx="9.29" cy="11.36" rx="9.294826572896952" ry="9.294826572896952" fill="#278eb3" stroke="none" pointer-events="none"/></g></svg>
                 </div>
-                <div class="w-full md:w-5/12">
-                    <img class="h-30 w-full object-cover sm:h-30 md:h-30 lg:h-30" src="{{ base_path ~ directory }}/assets/images/about_us/misc/our-mission.png" alt="">
-                </div>
+            </div>
+            <div class="col-span-5">
+                    <img class="w-full object-cover sm:h-72 md:h-96 2xl:h-full lg:w-full rounded-bl-2xl rounded-tl-2xl roun" src="{{ base_path ~ directory }}/assets/images/about_us/misc/about-us-banner.png" alt="">
             </div>
         </div>
-    </section>
-    <section>
-        <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-            <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-                <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-                    <span class="font-extralight">__________________</span>  Team
-                </h2>
-            </div>
-            <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 grid-cols-1">
-                <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover rounded w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/BakulRao.png" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Dr. Bakul Rao</p>
-                            <p class="mb-4 text-xs text-gray-100">Professor</p>
-                        </div>
-                    </div>
-                </div>
+    </div>
+</section>
 
-                <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/Meghraj.jpg" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Meghraj</p>
-                            <p class="mb-4 text-xs text-gray-100">Project Officer</p>
-                        </div>
+<section class="h-80">
+    <div class="">
+        <div class="grid grid-cols-12">
+            <div class="bg-pryg-blue-v1 col-span-8 rounded-br-2xl rounded-tr-2xl inline-block">
+                <div class="h-80 bg-pryg-blue-v2 py-10  rounded-br-2xl rounded-tr-2xl ml-5 mt-auto mb-auto">
+                    <div class="flex sm:text-center lg:text-left mx-60">
+                        <h2 class="text-2xl tracking-tight font-extrabold text-pryg-white-v1 sm:text-5xl md:text-xl 2xl:text-4xl">
+                            Our Mission
+                        </h2>
+                        <hr class="my-10 w-40 border-t-1 border-pryg-white-v1">
+                    </div>
+                    <div class="text-pryg-white-v1 left-36">
+                        <p class="sm:text-center lg:text-left text-xl tracking-wide mx-60">
+                            Become the first port of call for solving all development problems and be firmly engaged with society to provide innovative technological solutions through multi-stakeholder collaborative association.
+                        </p>
                     </div>
                 </div>
-                <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/Sushama.jpg" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Sushama</p>
-                            <p class="mb-4 text-xs text-gray-100">Project Officer</p>
-                        </div>
-                    </div>
+            </div>
+            <div class=" bg-pryg-yellow col-span-4">
+                <div class="rounded-tr-3xl mr-5">
+                    <img class=" object-cover h-80 w-full" src="{{ base_path ~ directory }}/assets/images/about_us/misc/our-mission.png" alt="our_mission_image">
                 </div>
-                <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/Vishnu.jpg" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Vishnu</p>
-                            <p class="mb-4 text-xs text-gray-100">Project Officer</p>
-                        </div>
-                    </div>
-                </div>
-                {# <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Martin Garix</p>
-                            <p class="mb-4 text-xs text-gray-100">Good guy</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Andrew Larkin</p>
-                            <p class="mb-4 text-xs text-gray-100">Backend Developer</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Sophie Denmo</p>
-                            <p class="mb-4 text-xs text-gray-100">Designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-                        <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.pexels.com/photos/3931553/pexels-photo-3931553.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Person" />
-                        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
-                            <p class="mb-1 text-lg font-bold text-gray-100">Benedict Caro</p>
-                            <p class="mb-4 text-xs text-gray-100">Frontend Developer</p>
-                        </div>
-                    </div>
-                </div> #}
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+{# <section>
+    <div class="">
+        <div class="flex flex-col md:flex-row mb-24 mt-20">
+            <div class="relative w-full md:w-7/12 bg-gray-800 rounded-br-2xl rounded-tr-2xl">
+            <div class="ml-40">
+                <div class="sm:text-center lg:text-left pt-10">
+                <h2 class=" text-white text-2xl tracking-tight font-extrabold sm:text-5xl md:text-xl 2xl:text-5xl">
+                    Our Mission
+                </h2>
+                <p class="mt-3 text-base text-gray-200 sm:mt-5 md:max-w-sm md:mt-5 2xl:text-xl">
+                    Become the first port of call for all development problems and be firmly engaged with society to provide innovative technological solutions through multi-stakeholder collaborative association.
+                </p>
+                </div>
+            </div>
+            </div>
+            <div class="w-full md:w-5/12">
+                <img class="h-30 w-full object-cover sm:h-30 md:h-30 lg:h-30" src="{{ base_path ~ directory }}/assets/images/about_us/misc/our-mission.png" alt="">
+            </div>
+        </div>
+    </div>
+</section> #}
+
+<section>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                <span class="font-extralight">__________________</span>  Team
+            </h2>
+        </div>
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 grid-cols-1">
+            <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover rounded w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/BakulRao.png" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Dr. Bakul Rao</p>
+                        <p class="mb-4 text-xs text-gray-100">Professor</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/Meghraj.jpg" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Meghraj</p>
+                        <p class="mb-4 text-xs text-gray-100">Project Officer</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/Sushama.jpg" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Sushama</p>
+                        <p class="mb-4 text-xs text-gray-100">Project Officer</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="{{ base_path ~ directory }}/assets/images/about_us/team/Vishnu.jpg" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Vishnu</p>
+                        <p class="mb-4 text-xs text-gray-100">Project Officer</p>
+                    </div>
+                </div>
+            </div>
+            {# <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Martin Garix</p>
+                        <p class="mb-4 text-xs text-gray-100">Good guy</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.pexels.com/photos/3931603/pexels-photo-3931603.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Andrew Larkin</p>
+                        <p class="mb-4 text-xs text-gray-100">Backend Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Sophie Denmo</p>
+                        <p class="mb-4 text-xs text-gray-100">Designer</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+                    <img class="object-cover w-full h-56 md:h-64 xl:h-80" src="https://images.pexels.com/photos/3931553/pexels-photo-3931553.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Person" />
+                    <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+                        <p class="mb-1 text-lg font-bold text-gray-100">Benedict Caro</p>
+                        <p class="mb-4 text-xs text-gray-100">Frontend Developer</p>
+                    </div>
+                </div>
+            </div> #}
+        </div>
+    </div>
+</section>
+
 {# {% else  %}
  <div class="layout-content">
       {{ page.content }}

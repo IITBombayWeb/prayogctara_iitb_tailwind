@@ -6,3 +6,24 @@ global-styling:
       css/tailwind-build.css: {}
   js:
     js/tailwindcss.js: {}    
+
+splidejs:
+  remote: https://splidejs.com/
+  version: 2.4.21
+  license:
+    name: MIT
+    url: https://github.com/Splidejs/splide/blob/master/LICENSE
+    gpl-compatible: true
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/@splidejs/splide@3.1.2/dist/css/splide.min.css: { type: external, minified: true }
+  js:
+    https://cdn.jsdelivr.net/npm/@splidejs/splide@3.1.2/dist/js/splide.min.js: { type: external, minified: true }
+
+
+autoSizeSlider: 
+  version: 1.x
+  js:
+    js/autoSizeSlider.js: {}
+  dependencies:
+    - ctara_prayog_tailwindcss_theme/splidejs

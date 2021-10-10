@@ -29,3 +29,8 @@
         @apply mx-auto lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl;
     }
 }
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+  }
