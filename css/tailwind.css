@@ -28,6 +28,10 @@
     .pryg-container {
         @apply mx-auto lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl;
     }
+    
+    main a{
+        @apply text-pryg-blue-v1
+    }
 }
 
 .splide__slide img {

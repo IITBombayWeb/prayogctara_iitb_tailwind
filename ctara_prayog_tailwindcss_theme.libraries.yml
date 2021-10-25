@@ -4,8 +4,8 @@ global-styling:
   css:
     theme:
       css/tailwind-build.css: {}
-  js:
-    js/tailwindcss.js: {}    
+  # js:
+  #   js/tailwindcss.js: {}    
 
 splidejs:
   remote: https://splidejs.com/
