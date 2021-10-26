@@ -1,2 +1,14 @@
 {
+    "name": "iitbombayweb/ctara_prayog_tailwindcss_theme",
+    "description": "This is a theme for drupal 9 web platform for Ctara-Prayog-Project",
+    "type": "drupal-theme",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "tdnshah",
+            "email": "sankettejas@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
 }

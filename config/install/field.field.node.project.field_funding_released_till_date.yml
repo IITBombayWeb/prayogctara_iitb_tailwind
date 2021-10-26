@@ -1,0 +1,23 @@
+uuid: 86063104-843c-407a-ad8f-e416b2b532c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_released_till_date
+    - node.type.project
+id: node.project.field_funding_released_till_date
+field_name: field_funding_released_till_date
+entity_type: node
+bundle: project
+label: 'Funding Released Till Date'
+description: 'This field can be used to add the funding released till date for the project.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal
