@@ -5,8 +5,6 @@ dependencies:
     - field.field.node.page.field_paragraphs
     - node.type.page
   module:
-    - field_layout
-    - layout_discovery
     - paragraphs
     - path
 third_party_settings:

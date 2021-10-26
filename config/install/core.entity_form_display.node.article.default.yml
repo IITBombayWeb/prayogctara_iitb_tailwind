@@ -10,9 +10,7 @@ dependencies:
     - node.type.article
   module:
     - comment
-    - field_layout
     - image
-    - layout_discovery
     - path
     - text
 third_party_settings:

@@ -15,9 +15,7 @@ dependencies:
     - node.type.project
   module:
     - datetime
-    - field_layout
     - image
-    - layout_builder
     - text
     - user
 third_party_settings:

@@ -9,9 +9,7 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_text
   module:
-    - field_layout
     - image
-    - layout_discovery
     - text
 third_party_settings:
   field_layout:

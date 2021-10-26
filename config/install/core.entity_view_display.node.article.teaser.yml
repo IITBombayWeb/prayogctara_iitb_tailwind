@@ -10,10 +10,7 @@ dependencies:
     - image.style.medium
     - node.type.article
   module:
-    - field_layout
     - image
-    - layout_builder
-    - layout_discovery
     - text
     - user
 third_party_settings:

@@ -6,8 +6,6 @@ dependencies:
     - node.type.page
   module:
     - entity_reference_revisions
-    - field_layout
-    - layout_builder
     - user
 third_party_settings:
   field_layout:
