@@ -1,5 +1,5 @@
 {
-    "name": "iitbombayweb/ctara_prayog_tailwindcss_theme",
+    "name": "IITBombayWeb/prayogctara_iitb_tailwind",
     "description": "This is a theme for drupal 9 web platform for Ctara-Prayog-Project",
     "type": "drupal-theme",
     "license": "GPL-2.0-or-later",
@@ -10,5 +10,11 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/feeds": "^3.0@alpha",
+        "drupal/paragraphs": "^1.12",
+        "drupal/paragraphs_collapsible": "^1.2",
+        "drupal/pathauto": "^1.8"
+    }
 }
