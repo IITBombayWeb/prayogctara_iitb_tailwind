@@ -1,4 +1,3 @@
-uuid: 032bb07e-fa99-45f3-a065-6f57dc7ab952
 langcode: en
 status: true
 dependencies:
@@ -8,8 +7,6 @@ dependencies:
     - system
   theme:
     - ctara_prayog_tailwindcss_theme
-_core:
-  default_config_hash: 8zRjTNbfNAJ94lQpZDu6MkyD87GYJ2zpH9VQPVmRbcM
 id: ctara_prayog_tailwindcss_theme_footer
 theme: ctara_prayog_tailwindcss_theme
 region: footer
