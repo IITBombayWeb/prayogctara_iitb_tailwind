@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for a 'form' element.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the form.
+ *
+ * @see template_preprocess_form()
+ */
+#}
+{% set tailwindClassesForm = [
+  'mx-auto',
+  'py-10',
+] 
+%}
+<section>
+    <div class="pryg-container"> 
+        <div class="mx-auto text-center px-90">
+            <span class="py-1 text-pryg-orange text-center text-xl font-semibold">Lets' Connect</span>
+            <h3 class="">Find Technology driven solution</h3>
+            <h5 class="py-14 text-gray-500 font-normal px-8">The platform in India that brings multiple stakeholders together to address social issues.</h5>
+        </div>
+        <div class="flex pb-20">
+          <form{{ attributes.addClass(tailwindClassesForm) }}>
+            {{ children }}
+          </form>
+        </div>
+    </div>
+</section>

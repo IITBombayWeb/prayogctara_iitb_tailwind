@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme override for a 'textarea' #type form element.
+ *
+ * Available variables
+ * - wrapper_attributes: A list of HTML attributes for the wrapper element.
+ * - attributes: A list of HTML attributes for the <textarea> element.
+ * - resizable: An indicator for whether the textarea is resizable.
+ * - required: An indicator for whether the textarea is required.
+ * - value: The textarea content.
+ *
+ * @see template_preprocess_textarea()
+ */
+#}
+{% set tailwindClassesInput = [
+    'text-center', 
+    'italic',
+    'text-pryg-blue-v2',
+    'text-lg', 
+    'font-normal', 
+    'mb-10', 
+    'p-7', 
+    'border-b-2',
+    'border-pryg-blue-v2', 
+    'focus:border-b-2',
+    'border-pryg-yellow',
+] %}
+<div{{ wrapper_attributes }}>
+  <textarea{{ attributes.addClass(tailwindClassesInput) }}>{{ value }}</textarea>
+</div>

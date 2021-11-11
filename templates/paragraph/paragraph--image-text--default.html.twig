@@ -38,18 +38,29 @@
  * @ingroup themeable
  */
 #}
-{%
-  set classes = [
-    'paragraph',
-    'paragraph--type--' ~ paragraph.bundle|clean_class,
-    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-    not paragraph.isPublished() ? 'paragraph--unpublished',
-    'pryg-container' 
-  ]
-%}
+{# {% set horizontalFullWidth = content.field_horizontal_full_width|striptags|trim|lower %} #}
+{# {% if horizontalFullWidth == 'off' %} #}
+    {%
+    set classes = [
+        'paragraph',
+        'paragraph--type--' ~ paragraph.bundle|clean_class,
+        view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+        not paragraph.isPublished() ? 'paragraph--unpublished',
+        'pryg-container' 
+    ]
+    %}
+{# {% else %}
+    {%
+    set classes = [
+        'paragraph',
+        'paragraph--type--' ~ paragraph.bundle|clean_class,
+        view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+        not paragraph.isPublished() ? 'paragraph--unpublished',
+    ]
+    %}
+{% endif %} #}
 
 {% set alignLeft = content.field_align_image_left|render|striptags|trim|lower  %}
-
 {% block paragraph %}
 <section class="relative py-10">
   <div{{ attributes.addClass(classes) }}>
@@ -58,7 +69,7 @@
             <div class="grid grid-cols-2">
                 <div>
                     <div class="py-10 flex text-pryg-white-v2">
-                        <h4 class="pr-10 text-pryg-orange lg:text-5xl xl-text-6xl">{{ content.field_title }}</h4>
+                        <h4 class="pr-10 text-pryg-orange lg:text-5xl xl-text-6xl">{{ content.field_title }} {{ content.field_horizontal_full_width }}</h4>
 
                         <hr class="my-auto w-36 border-1 border-pryg-blue-v2 justify-items-start" />
                     </div>

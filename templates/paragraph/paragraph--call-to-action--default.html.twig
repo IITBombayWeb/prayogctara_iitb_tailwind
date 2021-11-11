@@ -1,0 +1,26 @@
+<section class="h-80">
+    <div class="">
+        <div class="grid grid-cols-12">
+            <div class="bg-pryg-blue-v1 col-span-8 rounded-br-2xl rounded-tr-2xl inline-block">
+                <div class="h-80 bg-pryg-blue-v2 py-10  rounded-br-2xl rounded-tr-2xl ml-5 mt-auto mb-auto">
+                    <div class="flex sm:text-center lg:text-left mx-60">
+                        <h2 class="text-2xl tracking-tight font-extrabold text-pryg-white-v1 sm:text-5xl md:text-xl 2xl:text-4xl">
+                            {{ paragraph.field_title.value }}
+                        </h2>
+                        <hr class="my-10 w-40 border-t-1 border-pryg-white-v1 pl-10">
+                    </div>
+                    <div class="text-pryg-white-v1 left-36">
+                        <p class="sm:text-center lg:text-left text-xl tracking-wide mx-60">
+                            {{ paragraph.field_text.value|striptags }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class=" bg-pryg-yellow col-span-4">
+                <div class="rounded-tr-3xl mr-5">
+                    <img class=" object-cover h-80 w-full" src="{{ file_url(paragraph.field_image.entity.uri.value) }}" alt="{{ content.field_custom_image['#items'].alt }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

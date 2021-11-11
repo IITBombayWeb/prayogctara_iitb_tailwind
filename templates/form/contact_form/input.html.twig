@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+{% set tailwindClassesInput = [
+    'text-center', 
+    'italic',
+    'text-pryg-blue-v2',
+    'text-lg', 
+    'font-normal', 
+    'mb-10', 
+    'p-7', 
+    'border-b-2',
+    'border-pryg-blue-v2', 
+    'focus:border-b-2',
+    'border-pryg-yellow',
+] %}
+
+<input{{ attributes.addClass(tailwindClassesInput) }} />{{ children }}

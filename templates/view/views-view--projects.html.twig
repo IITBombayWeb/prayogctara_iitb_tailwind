@@ -33,16 +33,25 @@
 {%
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
+    'pryg-container',
   ]
 %}
-<section{{ attributes.addClass(classes) }}>
+<div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
   {{ title_suffix }}
 
   {% if header %}
     <header>
-      {{ header }}
+       <div class="flex py-5">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50px" viewBox="-0.5 -0.5 77 77" style="max-width:100%;max-height:50px; position:absolute; left:-80px; top:10px"><defs/><g><path d="M 38.07 11 L 65.07 38 L 38.07 65 L 11.07 38 Z" fill="#e95b1d" stroke="none" transform="rotate(55,38.07,38)" pointer-events="all"/></g></svg>
+            <span class="text-3xl font-semibold text-pryg-orange">{{ header }}</span>
+             <hr class="my-10 w-80 border-t-1 border-pryg-orange">
+            {# <span class="ml-4 italic text-3xl font-light text-pryg-blue-v1">
+                Media
+            </span> #}
+        </div>
+      
     </header>
   {% endif %}
 
@@ -50,11 +59,7 @@
   {{ attachment_before }}
 
   {% if rows -%}
-  <div class="ml-80 py-5">
-    <div class="grid grid-cols-3 gap-3">
-          {{ rows }}
-    </div>
-  </div>
+    {{ rows }}
   {% elseif empty -%}
     {{ empty }}
   {% endif %}
@@ -70,4 +75,4 @@
   {% endif %}
 
   {{ feed_icons }}
-</section>
+</div>

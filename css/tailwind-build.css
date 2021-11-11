@@ -550,6 +550,10 @@ video {
  * Ensure the default browser behavior of the `hidden` attribute.
  */
 
+[hidden] {
+  display: none;
+}
+
 *, ::before, ::after {
   --tw-border-opacity: 1;
   border-color: rgba(229, 231, 235, var(--tw-border-opacity));
@@ -868,6 +872,14 @@ main a{
   display: grid;
 }
 
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -1169,6 +1181,11 @@ main a{
   background-color: rgba(248, 188, 40, var(--tw-bg-opacity));
 }
 
+.bg-pryg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgba(233, 91, 29, var(--tw-bg-opacity));
+}
+
 .bg-pryg-blue-v1 {
   --tw-bg-opacity: 1;
   background-color: rgba(39, 142, 179, var(--tw-bg-opacity));
@@ -1320,6 +1337,10 @@ main a{
   padding-right: 2.5rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .pb-14 {
   padding-bottom: 3.5rem;
 }
@@ -1445,6 +1466,11 @@ main a{
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgba(17, 24, 39, var(--tw-text-opacity));
+}
+
+.text-pryg-yellow {
+  --tw-text-opacity: 1;
+  color: rgba(248, 188, 40, var(--tw-text-opacity));
 }
 
 .text-pryg-orange {
