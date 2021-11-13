@@ -9,11 +9,6 @@ dependencies:
   module:
     - link
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.highlighted_text_.default
 targetEntityType: paragraph
 bundle: highlighted_text_

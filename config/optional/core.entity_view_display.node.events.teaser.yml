@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.body
+    - field.field.node.events.field_end_date
+    - field.field.node.events.field_event_fee
+    - field.field.node.events.field_event_type
+    - field.field.node.events.field_event_venue
+    - field.field.node.events.field_paid_event
+    - field.field.node.events.field_start_date
+    - node.type.events
+  module:
+    - text
+    - user
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_end_date: true
+  field_event_fee: true
+  field_event_type: true
+  field_event_venue: true
+  field_paid_event: true
+  field_start_date: true

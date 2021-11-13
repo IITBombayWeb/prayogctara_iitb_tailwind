@@ -3,19 +3,16 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_text.field_align_image_left
+    - field.field.paragraph.image_text.field_horizontal_full_width
     - field.field.paragraph.image_text.field_image
     - field.field.paragraph.image_text.field_text
+    - field.field.paragraph.image_text.field_text_colour
     - field.field.paragraph.image_text.field_title
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_text
   module:
     - image
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: paragraph.image_text.default
 targetEntityType: paragraph
 bundle: image_text
@@ -23,6 +20,13 @@ mode: default
 content:
   field_align_image_left:
     weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_horizontal_full_width:
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
@@ -43,6 +47,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_text_colour:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_title:
     weight: 0

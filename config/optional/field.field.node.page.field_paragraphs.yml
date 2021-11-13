@@ -1,10 +1,10 @@
-uuid: 0a4c85cd-e4c5-4632-904a-2d2e1343cc39
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_paragraphs
     - node.type.page
+    - paragraphs.paragraphs_type.call_to_action
     - paragraphs.paragraphs_type.highlighted_text_
     - paragraphs.paragraphs_type.image_text
   module:
@@ -26,7 +26,11 @@ settings:
     target_bundles:
       image_text: image_text
       highlighted_text_: highlighted_text_
+      call_to_action: call_to_action
     target_bundles_drag_drop:
+      call_to_action:
+        enabled: true
+        weight: 4
       highlighted_text_:
         enabled: true
         weight: 3

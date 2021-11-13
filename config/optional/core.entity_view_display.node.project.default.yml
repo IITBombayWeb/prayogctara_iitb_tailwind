@@ -18,14 +18,6 @@ dependencies:
     - image
     - text
     - user
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
-  layout_builder:
-    enabled: false
-    allow_custom: false
 id: node.project.default
 targetEntityType: node
 bundle: project

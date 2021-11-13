@@ -19,11 +19,6 @@ dependencies:
     - image
     - path
     - text
-third_party_settings:
-  field_layout:
-    id: layout_onecol
-    settings:
-      label: ''
 id: node.project.default
 targetEntityType: node
 bundle: project

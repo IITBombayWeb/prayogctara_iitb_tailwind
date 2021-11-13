@@ -1,4 +1,3 @@
-uuid: ccc84f56-eeca-430c-a9b7-d4f602e81862
 langcode: en
 status: true
 dependencies:
@@ -9,9 +8,9 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Project
-type: project
-description: 'Use Projects for adding each project details  '
+name: Events
+type: events
+description: 'The content type used for storing events and its details'
 help: ''
 new_revision: true
 preview_mode: 1
