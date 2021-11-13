@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Thematic Areas'
-vid: thematic_areas
-description: ''
-weight: 0
