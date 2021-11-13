@@ -1,0 +1,21 @@
+uuid: 62d48417-b39c-4fe7-b777-0579623baafa
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_event_venue
+field_name: field_event_venue
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
