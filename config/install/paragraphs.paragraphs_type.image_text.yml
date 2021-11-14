@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: image_text
-label: 'Image & Text'
-icon_uuid: null
-icon_default: null
-description: 'This paragraph can be used to create a image and test side by side type of section. The configurations offers either left side image and right side text and vice-versa '
-behavior_plugins: {  }
