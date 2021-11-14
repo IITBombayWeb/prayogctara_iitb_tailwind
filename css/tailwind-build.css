@@ -1146,6 +1146,11 @@ main a{
   border-color: rgba(248, 188, 40, var(--tw-border-opacity));
 }
 
+.border-pryg-orange {
+  --tw-border-opacity: 1;
+  border-color: rgba(233, 91, 29, var(--tw-border-opacity));
+}
+
 .border-pryg-blue-v2 {
   --tw-border-opacity: 1;
   border-color: rgba(41, 65, 75, var(--tw-border-opacity));
@@ -1351,6 +1356,10 @@ main a{
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .text-center {
