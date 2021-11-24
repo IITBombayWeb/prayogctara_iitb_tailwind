@@ -16,6 +16,6 @@
         "drupal/paragraphs": "^1.12",
         "drupal/paragraphs_collapsible": "^1.2",
         "drupal/pathauto": "^1.8",
-        "drupal/features": "^3.12",
+        "drupal/features": "^3.12"
     }
 }
