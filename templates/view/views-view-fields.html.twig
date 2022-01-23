@@ -29,7 +29,8 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-{# {% for field in fields -%}
+<div class="p-5">
+{% for field in fields -%}
   {{ field.separator }}
   {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
@@ -49,13 +50,5 @@
   {%- if field.wrapper_element -%}
     </{{ field.wrapper_element }}>
   {%- endif %}
-{%- endfor %} #}
-{# {% if fields.field_thumbnail.content  is not empty %}
-<img class="object-cover rounded w-full h-56 md:h-64 xl:h-96" src="{{ fields.field_thumbnail.content|striptags }}" alt="Person">
-{% else %} #}
-<img class="object-cover rounded w-full h-56 md:h-64 xl:h-96" src="{{ fields.field_image.content|striptags }}" alt="{{ fields.field_image.alt }}">
-{# {% endif %} #}
-<div class="py-5 px-5 absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-pryg-blue-v2 opacity-0 group-hover:opacity-100">
-    <p class="mb-1 text-lg font-bold text-gray-100"><a href="{{ fields.view_node.content|striptags }}">{{ fields.title.content|striptags }}</a></p>
-    <p class="mb-4 text-xs text-gray-100">{{ fields.body.content|striptags }}</p>
+{%- endfor %}
 </div>

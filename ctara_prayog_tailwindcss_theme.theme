@@ -61,3 +61,9 @@ if (isset($variables['elements']['#configuration']['view_mode'])) {
     $suggestions[] = 'block__' . $bundle;
   }
 }
+
+// function ctara_prayog_tailwindcss_theme_preprocess_page(&$variables) {
+//   if ($variables['is_front']) {
+//     dpm($variables);
+//   }
+// }

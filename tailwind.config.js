@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         'hero-pattern': "url('https://images.unsplash.com/photo-1464972377689-e7674c48d806?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2055&q=80')",
+        '3ps': "url('data:image/svg+xml;utf8, ./assets/images/homepage/misc/PRAYOG_WEBSITE_3Ps.svg')",
       },
       colors: {
         'pryg-yellow': '#F8BC28',
