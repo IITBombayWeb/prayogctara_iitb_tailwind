@@ -14,7 +14,8 @@ dependencies:
 regions:
   header: Header
   content: Content
-  footer: Footer
+  footer_menu: Footer Menu
+  footer_social_media: Footer Social Media Menu
 
 libraries:
   - ctara_prayog_tailwindcss_theme/global-styling

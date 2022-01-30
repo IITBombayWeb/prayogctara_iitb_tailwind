@@ -1,0 +1,79 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{# <div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div> #}
+{% set title_classes = [
+    'text-lg', 
+    'xl:text-2xl',
+    'tracking-tight',
+    'font-extrabold', 
+    'text-pryg-white-v1', 
+    'sm:text-5xl', 
+    'md:text-xl', 
+    '2xl:text-4xl'
+] %}
+{% set horizontalline_classes = [
+    'my-10', 'w-40',
+    'border-t-1',
+    'border-pryg-white-v1',
+    'pl-10'
+] %}
+<div {{attributes}}> 
+<section class="h-60 xl:h-80 bg-pryg-yellow grid grid-cols-12">   
+    <div class="h-60 xl:h-80 col-span-8 left-0 bg-pryg-blue-v2 border-l-[20px] border-pryg-blue-v1 rounded-r-2xl z-10">
+        <div class="grid h-60 xl:h-80">
+            <div class="place-self-center mx-20  xl:mx-60">
+                <div class="flex sm:text-center xl:text-left">
+                 {{ title_prefix }}
+                <h2 {{ title_attributes.addClass(title_classes) }}>
+                    {{label}}
+                </h2>
+                {{ title_suffix }}
+                <hr {{attributes.addClass(horizontalline_classes).removeClass(['layout-builder-block', 'contextual-region', 'js-layout-builder-block'])}}>
+            </div>
+            <div class="text-pryg-white-v1 left-36">
+                <p class="sm:text-center lg:text-left text-sm xl:text-xl tracking-wide">
+                   {{ content.body|render|striptags }}
+                </p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-span-4 relative">
+        <img class="absolute right-5 object-cover h-60 xl:h-80 w-full" src={{file_url(content.field_image.0['#item'].entity.uri.value) }} alt={{ content.field_image['#items'].alt }}>
+    </div>
+</section>
+</div>

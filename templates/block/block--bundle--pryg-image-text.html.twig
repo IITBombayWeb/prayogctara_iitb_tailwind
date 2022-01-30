@@ -1,0 +1,96 @@
+{% set horizontalFullWidth = content.field_horizontal_full_width.0 %}
+
+{% set headline_color = content.field_text_color|render|striptags|trim%}
+
+{% if "On" in horizontalFullWidth %}
+    {%
+        set classes = [
+            'pryg-container' 
+        ]
+    %}
+    {%
+        set padding = [
+            'grid',
+            'ml-0' 
+        ]
+    %}
+{% else %}
+    {%
+        set classes = []
+    %}
+    {%
+        set padding = [
+            'grid',
+            'ml-20' 
+        ]
+    %}
+{% endif %}
+
+{% set heading_style = [
+    'lg:text-5xl',
+    'xl-text-6xl',
+    'pr-4',
+    'text-' ~  headline_color,
+] %}
+
+{% set horizontal_line = [
+    'w-36',
+    'border-1',
+    'border-' ~ headline_color,
+    'place-self-end'
+] %}
+
+{% set classesTORemove = [
+    'pryg-container',
+    'grid',
+    'ml-0',
+    'ml-20',    
+    'layout-builder-block',
+    'contextual-region',
+    'js-layout-builder-block'
+    ]
+ %}
+<div {{ attributes.addClass(classes) }}>
+<section class="py-10">
+    {% block content %}
+        {% if "On" in content.field_align_image_left.0 %} 
+            <div class="grid grid-cols-2">
+                <div {{attributes.addClass(padding).removeClass(['pryg-container', 'layout-builder-block', 'contextual-region', 'js-layout-builder-block'])}}>
+                    <div class="py-10 flex text-pryg-white-v2">
+                        {{title_prefix}}
+                        <h2 {{  title_attributes.addClass(heading_style) }}>{{ label }}</h2>
+                        {{title_suffix}}
+                        <hr {{attributes.addClass(horizontal_line).removeClass(classesTORemove)}} />
+                    </div>
+                    <div class="py-10 text-xl tracking-wide text-pryg-blue-v2 font-normal py-2 prose">
+                        {{ content.body }}
+                    </div>
+                </div>
+                <div class="grid justify-items-center place-items-center">
+                    <img src="{{file_url(content.field_image.0['#item'].entity.uri.value) }}" alt="" class="w-[300px]">
+                    {# {{file_url(content.field_image.0['#item'].entity.uri.value) }} #}
+                </div>
+            </div>
+        {% else %}
+            <div class="grid grid-cols-2">
+                 <div class="grid justify-items-center place-items-center">
+                    {{ content.field_image }}
+                    {# {{file_url(content.field_image.0['#item'].entity.uri.value) }} #}
+                </div>
+                <div {{attributes.addClass(padding).removeClass(['layout-builder-block', 'contextual-region', 'js-layout-builder-block'])}}>
+                    <div class="py-10 flex text-pryg-white-v2">
+                        {{title_prefix}}
+                        <h2 {{  title_attributes.addClass(heading_style) }}>{{ label }}</h2>
+                        {{title_prefix}}
+                        <hr {{attributes.addClass(horizontal_line).removeClass(classesTORemove)}} />
+                    </div>
+                    <div class="py-10 text-xl tracking-wide text-pryg-blue-v2 font-normal py-2 prose">
+                        {{ content.body }}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    {% endblock %}
+</section>
+</div>
+

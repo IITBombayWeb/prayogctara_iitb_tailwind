@@ -49,11 +49,8 @@
             </div>
         </div>
     </section>
-{{ page.content }}
+    {{ page.content }}
 </main>
-<footer class="h-1/2 bg-pryg-white-v2">
-{{ page.footer }}
-</footer>
 {# <section class="relative py-10">
     <div class="pryg-container">
         <div class="flex flex-col md:flex-row gap-4 mb-24 mt-20">
@@ -98,9 +95,135 @@
         </div>
     </div>
 </section> #}
-
-
  {# <div class="layout-content">
       {{ page.content }}
  </div>/.layout-content #}
+
+{# Main big Circle section #}
+    {#<section class="relative py-10">
+        <div class="pryg-container relative">
+            <div class="right-10  absolute">
+                 <div class="flex">
+                    <h2 class="text-2xl tracking-tight font-extrabold text-pryg-gray-v1 sm:text-5xl md:text-xl 2xl:text-4xl">3P's</h2>
+                    <hr class="my-10 w-40 border-t-1 border-pryg-blue-v1 pl-10">
+                    <h2 class="text-2xl tracking-tight font-extrabold text-pryg-blue-v2 sm:text-5xl md:text-xl 2xl:text-4xl">
+                        Our Strategy
+                    </h2>
+                </div>
+            </div>
+            <div class="">
+                <img class="mx-auto pb-32 w-9/12  h-9/12" src="{{ base_path ~ directory }}/assets/images/homepage/misc/PRAYOG_WEBSITE_3Ps.svg" alt="process">
+            </div>
+            <div class="grid grid-cols-2 absolute bottom-0">
+                <div>
+                    <div class="py-10 flex text-pryg-white-v2">
+                        <h4 class="content:block text-pryg-gray-v2 pr-10 uppercase text-pryg-gray-v2 text-base">Our Strategy</h4>
+                        <hr class="my-auto w-36 border-1 border-pryg-blue-v2 justify-items-start"> 
+                    </div>
+                    <div>
+                        <p class="text-xl tracking-wide text-pryg-blue-v2 font-normal">We seek to leverage the strengths of various
+                            stakeholders including government agencies,
+                            nonprofit organisations, corporates and
+                            academic institutions. We use a 3P approach
+                            i.e. product, process & policy to find solutions
+                            to development issues in the country.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> #}
+{# 3ps Approach section #}
+    {# <section class="py-10">
+        <div class="grid grid-cols-7 gap-4">
+            <div class="grid col-span-1">
+                <div class="vertical_writing_mode place-self-center text-5xl text-gray-200 font-bold">
+                    3P's Approach
+                </div>
+            </div>
+            <div class="col-span-2">
+                <a href="/products">
+                    <div class="grid justify-items-center">
+                        <div class="flex w-40 h-40 text-center bg-gray-100 rounded-full hover:bg-pryg-blue-v1 hover:text-white justify-center ring-1 ring-pryg-gray-v1 ring-offset-8 xl:text-3xl font-bold text-pryg-blue-v2 relative">
+                            <div class="self-center">Product</div>
+                            <div class="absolute h-8 w-8 bg-pryg-blue-v1 rotate-12 top-0 left-0"></div>
+                        </div>
+                        <div class="lg:py-12 lg:px-12 xl:py-16 xl:px-20 text-center text-pryg-blue-v2 bg-gray-100 rounded-3xl mt-10 hover:text-pryg-blue-v1 xl:text-xl"> 
+                            Innovative Product,<br>
+                            Technological Solultions.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-2">
+                <a href="/process">
+                    <div class="grid justify-items-center">
+                        <div class="flex w-40 h-40 text-center bg-gray-100 rounded-full hover:bg-pryg-orange hover:text-white justify-center ring-1 ring-pryg-gray-v1 ring-offset-8 xl:text-3xl font-bold text-pryg-blue-v2 relative">
+                            <div class="self-center">Process</div>
+                            <div class="absolute h-8 w-8 bg-pryg-orange rotate-12 bottom-0 left-0"></div>
+                        </div>
+                        <div class="lg:py-12 lg:px-12 xl:py-16 xl:px-20 text-center bg-gray-100 rounded-3xl mt-10 hover:text-pryg-orange xl:text-xl text-pryg-blue-v2"> 
+                        Participatory, Impactful, <br>Framework tools, Replicable,<br>Integrated Approach.
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-2">
+                <a href="/policy">
+                <div class="grid justify-items-center">
+                    <div class="flex w-40 h-40 text-center bg-gray-100 rounded-full hover:bg-pryg-yellow hover:text-white justify-center ring-1 ring-pryg-gray-v1 ring-offset-8 xl:text-3xl font-bold text-pryg-blue-v2 relative">
+                        <div class="self-center">Policy</div>
+                        <div class="absolute h-8 w-8 bg-pryg-yellow rotate-12 top-0 right-0"></div>
+                    </div>
+                    <div class="lg:py-12 lg:px-12 xl:py-16 xl:px-20 text-center bg-gray-100 rounded-3xl mt-10 hover:text-pryg-yellow xl:text-xl text-pryg-blue-v2"> 
+                       Governance,<br>Effective Protocols.
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </section> #}
+{# #thematics Area section #}
+    {# <section class="py-32">
+        <div class="grid h-[600px]">
+            <div class="grid bg-pryg-yellow skew-y-1">
+                <div class="bg-pryg-white-v2 h-[600px] -skew-y-1 relative rounded-2xl">
+                    <div class="lg:h-96 lg:w-96  xl:h-[500px] xl:w-[500px] rounded-full bg-[url('https://images.unsplash.com/photo-1614761064673-d8cb9645e715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80')]  bg-cover text-center right-0 absolute -top-32"> 
+                    </div>
+                    <div class="grid lg:pt-28 lg:pl-28 xl:pt-32 xl:pl-72">
+                        <div class="flex">
+                            <h2 class="text-2xl font-extrabold text-pryg-blue-v2 sm:text-5xl md:text-xl 2xl:text-4xl">Thematic Area
+                            </h2>
+                            <hr class="w-40 border-t-1 border-pryg-blue-v2 pl-10 place-self-end ml-10">
+                            <div class="h-5 w-5 rounded-full bg-pryg-blue-v1 lg:ml-40 xl:ml-[36rem] place-self-center"></div>
+                        </div>
+                        <div class="grid grid-cols-2">
+                            <ul class="grid grid-cols-2">
+                                <div class="text-xl py-8">
+                                    <li class="py-1">Education</li>
+                                    <li class="py-1">Health & Nurtition</li>
+                                    <li class="py-1">Agriculture & Water resource</li>
+                                    <li class="py-1">Rural Development</li>
+                                    <li class="py-1">Sustainable Development Goals</li>
+                                    <li class="py-1">Women Development</li>
+                                    <li class="py-1">Rural Livelihood</li>
+                                    <li class="py-1">Monitoring & Evaluation</li>
+                                </div>
+                                <div class="text-xl py-8">
+                                    <li class="py-1">Program Design</li>
+                                    <li class="py-1">Skill development</li>
+                                    <li class="py-1">Agroforestry</li>
+                                    <li class="py-1">Slum area development</li>
+                                    <li class="py-1">Water Sanitation</li>
+                                    <li class="py-1">Natural resources conversation</li>
+                                    <li class="py-1">Corporate Social Responsibility</li>
+                                    <li class="py-1">Enviornmental Sustainability</li>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> #}
 {% include '@ctara_prayog_tailwindcss_theme/footer.html.twig' %}

@@ -1,56 +1,42 @@
-    <footer class="h-1/2 bg-pryg-white-v2">
-        <div class="pryg-container py-24 ">
-            <div class="grid grid-cols-3">
-                <!--Footer Logo & Info Section-->
-                <div class="col-span-2">
-                    <img class="lg:h-16 xl:h-20 2xl:h-24" src="{{ base_path ~ directory }}/assets/images/misc/logo/prayog-logo-without-bg.png" alt="">
-                    <hr class="my-10 w-24 border-t-1 border-pryg-blue-v2">
-                    <div class="text-pryg-gray-v2 font-light">
-                        <h4>Transforming lives through technolgy</h4>
-                        <p class="py-4">
-                            Centre for Technology Alternatives for Rural Areas<br>
-                            Indian Institute of Technology (IIT), Bombay, Powai, Mumbai 400076.
-                        </p>
-                    </div>
-                </div>
-                <!--Footer Contact Section & Social Menu-->
-                <div class="grid grid-cols-2 font-light">
-                    <!-- Contact Info-->
-                    <div class="text-pryg-gray-v2">
-                        <div>
-                            <h4>Email</h4>
-                            <p class="py-5">prayog.iitb@gmail.com</p>
-                        </div>
-                        <div>
-                            <h4>Contact</h4>
-                            <p class="py-5">022-25764805</p>
-                        </div>
-                    </div>
-                    <!--Social Menu-->
-                    <div class="text-pryg-gray-v2 justify-self-end">
-                        <div>
-                            <h4>Social</h4>
-                            <ul class="py-5">
-                                <li>LinkedIn</li>
-                                <li>Youtube</li>
-                                <li>Facebook</li>
-                                <li>Instagram</li>
-                            </ul>
-                        </div>
-                    </div>
+<footer class="h-1/2 bg-pryg-white-v2">
+    <div class="pryg-container py-12">
+        <div class="grid grid-cols-3">
+            <!--Footer Logo & Info Section-->
+            <div class="col-span-2">
+                <img class="lg:h-16 xl:h-20 2xl:h-24" src="{{ base_path ~ directory }}/assets/images/misc/logo/prayog-logo-without-bg.png" alt="">
+                <hr class="my-10 w-24 border-t-1 border-pryg-blue-v2">
+                <div class="text-pryg-gray-v2 font-light">
+                    <h4>Transforming lives through technolgy</h4>
+                    <p class="py-4">
+                        Centre for Technology Alternatives for Rural Areas<br>
+                        Indian Institute of Technology (IIT), Bombay, Powai, Mumbai 400076.
+                    </p>
                 </div>
             </div>
-            <div class="py-14 grid grid-cols-3 text-pryg-gray-v2">
-                <p>©2021</p>
-                <ul class='flex col-span-2 justify-end'>
-                    <hr class="my-auto w-32 border-1 border-pryg-blue-v2 justify-self-end">
-                    <li class="px-4">About Us</li>
-                    <li class="px-4">Projects</li>
-                    <li class="px-4">Events & Media</li>
-                    <li class="pl-4">Connect</li>
-                </ul> 
+            <!--Footer Contact Section & Social Menu-->
+            <div class="grid grid-cols-2 font-light">
+                <!-- Contact Info-->
+                <div class="text-pryg-gray-v2">
+                    <div>
+                        <h4>Email</h4>
+                        <p class="py-5">prayog.iitb@gmail.com</p>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <p class="py-5">022-25764805</p>
+                    </div>
+                </div>
+                <!--Social Menu-->
+                <div class="text-pryg-gray-v2 justify-self-end">
+                    <div>
+                        {{ page.footer_social_media }}
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
-</body>
-</html>
+        <div class="pt-5 grid grid-cols-2 text-pryg-gray-v2">
+            <p>©2021</p>
+            {{ page.footer_menu }}
+        </div>
+    </div>
+</footer>

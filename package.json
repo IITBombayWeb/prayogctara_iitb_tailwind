@@ -14,9 +14,9 @@
   "author": "Tejas Shah @tdnshah",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
-    "autoprefixer": "^10.3.6",
-    "postcss": "^8.3.8",
-    "tailwindcss": "^2.2.16",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.18",
     "vite": "^2.6.2"
   }
 }

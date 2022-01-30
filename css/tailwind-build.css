@@ -1,82 +1,67 @@
-/*! tailwindcss v2.2.16 | MIT License | https://tailwindcss.com */
-
-/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
-
 /*
-Document
-========
+! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
 */
 
-/**
-Use a better box model (opinionated).
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
 */
 
 *,
 ::before,
 ::after {
   box-sizing: border-box;
-}
-
-/**
-Use a more readable tab size (opinionated).
-*/
-
-html {
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-     tab-size: 4;
-}
-
-/**
-1. Correct the line height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-*/
-
-html {
-  line-height: 1.15;
   /* 1 */
-  -webkit-text-size-adjust: 100%;
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
   /* 2 */
 }
 
+::before,
+::after {
+  --tw-content: '';
+}
+
 /*
-Sections
-========
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
 */
 
-/**
-Remove the margin in all browsers.
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
 body {
   margin: 0;
-}
-
-/**
-Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-*/
-
-body {
-  font-family:
-		system-ui,
-		-apple-system, /* Firefox supports this but not yet `system-ui` */
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif,
-		'Apple Color Emoji',
-		'Segoe UI Emoji';
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
 }
 
 /*
-Grouping content
-================
-*/
-
-/**
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
 */
 
 hr {
@@ -84,23 +69,43 @@ hr {
   /* 1 */
   color: inherit;
   /* 2 */
+  border-top-width: 1px;
+  /* 3 */
 }
 
 /*
-Text-level semantics
-====================
-*/
-
-/**
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
-abbr[title] {
+abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
 }
 
-/**
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
 Add the correct font weight in Edge and Safari.
 */
 
@@ -109,28 +114,22 @@ strong {
   font-weight: bolder;
 }
 
-/**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the odd 'em' font sizing in all browsers.
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
 kbd,
 samp,
 pre {
-  font-family:
-		ui-monospace,
-		SFMono-Regular,
-		Consolas,
-		'Liberation Mono',
-		Menlo,
-		monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
 }
 
-/**
+/*
 Add the correct font size in all browsers.
 */
 
@@ -138,8 +137,8 @@ small {
   font-size: 80%;
 }
 
-/**
-Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
 sub,
@@ -159,13 +158,9 @@ sup {
 }
 
 /*
-Tabular data
-============
-*/
-
-/**
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
 */
 
 table {
@@ -173,16 +168,14 @@ table {
   /* 1 */
   border-color: inherit;
   /* 2 */
+  border-collapse: collapse;
+  /* 3 */
 }
 
 /*
-Forms
-=====
-*/
-
-/**
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
 */
 
 button,
@@ -194,55 +187,59 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 1 */
-  line-height: 1.15;
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
   /* 1 */
   margin: 0;
   /* 2 */
+  padding: 0;
+  /* 3 */
 }
 
-/**
+/*
 Remove the inheritance of text transform in Edge and Firefox.
-1. Remove the inheritance of text transform in Firefox.
 */
 
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
-/**
-Correct the inability to style clickable types in iOS and Safari.
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
 */
 
 button,
 [type='button'],
+[type='reset'],
 [type='submit'] {
   -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
 }
 
-/**
-Remove the inner border and padding in Firefox.
+/*
+Use the modern Firefox focus style for all focusable elements.
 */
 
-/**
-Restore the focus styles unset by the previous rule.
-*/
-
-/**
-Remove the additional ':invalid' styles in Firefox.
-See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
-*/
-
-/**
-Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
-*/
-
-legend {
-  padding: 0;
+:-moz-focusring {
+  outline: auto;
 }
 
-/**
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
 Add the correct vertical alignment in Chrome and Firefox.
 */
 
@@ -250,28 +247,46 @@ progress {
   vertical-align: baseline;
 }
 
-/**
+/*
 Correct the cursor style of increment and decrement buttons in Safari.
 */
 
-/**
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
 
-/**
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
 Remove the inner padding in Chrome and Safari on macOS.
 */
 
-/**
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to 'inherit' in Safari.
-*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 /*
-Interactive
-===========
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
 */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
 
 /*
 Add the correct display in Chrome and Safari.
@@ -281,15 +296,9 @@ summary {
   display: list-item;
 }
 
-/**
- * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
- * A thin layer on top of normalize.css that provides a starting point more
- * suitable for web applications.
- */
-
-/**
- * Removes the default spacing and border for appropriate elements.
- */
+/*
+Removes the default spacing and border for appropriate elements.
+*/
 
 blockquote,
 dl,
@@ -307,217 +316,80 @@ pre {
   margin: 0;
 }
 
-button {
-  background-color: transparent;
-  background-image: none;
-}
-
 fieldset {
   margin: 0;
   padding: 0;
 }
 
+legend {
+  padding: 0;
+}
+
 ol,
-ul {
+ul,
+menu {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/**
- * Tailwind custom reset styles
- */
-
-/**
- * 1. Use the user's configured `sans` font-family (with Tailwind's default
- *    sans-serif font stack as a fallback) as a sane default.
- * 2. Use Tailwind's default "normal" line-height so the user isn't forced
- *    to override it to ensure consistency even when using the default theme.
- */
-
-html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 1 */
-  line-height: 1.5;
-  /* 2 */
-}
-
-/**
- * Inherit font-family and line-height from `html` so users can set them as
- * a class directly on the `html` element.
- */
-
-body {
-  font-family: inherit;
-  line-height: inherit;
-}
-
-/**
- * 1. Prevent padding and border from affecting element width.
- *
- *    We used to set this in the html element and inherit from
- *    the parent element for everything else. This caused issues
- *    in shadow-dom-enhanced elements like <details> where the content
- *    is wrapped by a div with box-sizing set to `content-box`.
- *
- *    https://github.com/mozdevs/cssremedy/issues/4
- *
- *
- * 2. Allow adding a border to an element by just adding a border-width.
- *
- *    By default, the way the browser specifies that an element should have no
- *    border is by setting it's border-style to `none` in the user-agent
- *    stylesheet.
- *
- *    In order to easily add borders to elements by just setting the `border-width`
- *    property, we change the default border-style for all elements to `solid`, and
- *    use border-width to hide them instead. This way our `border` utilities only
- *    need to set the `border-width` property instead of the entire `border`
- *    shorthand, making our border utilities much more straightforward to compose.
- *
- *    https://github.com/tailwindcss/tailwindcss/pull/116
- */
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: currentColor;
-  /* 2 */
-}
-
 /*
- * Ensure horizontal rules are visible by default
- */
-
-hr {
-  border-top-width: 1px;
-}
-
-/**
- * Undo the `border-style: none` reset that Normalize applies to images so that
- * our `border-{width}` utilities have the expected effect.
- *
- * The Normalize reset is unnecessary for us since we default the border-width
- * to 0 on all elements.
- *
- * https://github.com/tailwindcss/tailwindcss/issues/362
- */
-
-img {
-  border-style: solid;
-}
+Prevent resizing textareas horizontally by default.
+*/
 
 textarea {
   resize: vertical;
 }
 
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
+  /* 1 */
   color: #9ca3af;
+  /* 2 */
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
+  /* 1 */
   color: #9ca3af;
+  /* 2 */
 }
 
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
+  /* 1 */
   color: #9ca3af;
+  /* 2 */
 }
+
+/*
+Set the default cursor for buttons.
+*/
 
 button,
 [role="button"] {
   cursor: pointer;
 }
 
-/**
- * Override legacy focus reset from Normalize with modern Firefox focus styles.
- *
- * This is actually an improvement over the new defaults in Firefox in our testing,
- * as it triggers the better focus styles even for links, which still use a dotted
- * outline in Firefox by default.
- */
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
 
-table {
-  border-collapse: collapse;
+:disabled {
+  cursor: default;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/**
- * Reset links to optimize for opt-in styling instead of
- * opt-out.
- */
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-/**
- * Reset form element properties that are easy to forget to
- * style explicitly so you don't inadvertently introduce
- * styles that deviate from your design system. These styles
- * supplement a partial reset that is already applied by
- * normalize.css.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  padding: 0;
-  line-height: inherit;
-  color: inherit;
-}
-
-/**
- * Use the configured 'mono' font family for elements that
- * are expected to be rendered with a monospace font, falling
- * back to the system monospace stack if there is no configured
- * 'mono' font family.
- */
-
-pre,
-code,
-kbd,
-samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-/**
- * 1. Make replaced elements `display: block` by default as that's
- *    the behavior you want almost all of the time. Inspired by
- *    CSS Remedy, with `svg` added as well.
- *
- *    https://github.com/mozdevs/cssremedy/issues/14
- * 
- * 2. Add `vertical-align: middle` to align replaced elements more
- *    sensibly by default when overriding `display` by adding a
- *    utility like `inline`.
- *
- *    This can trigger a poorly considered linting error in some
- *    tools but is included by design.
- * 
- *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
- */
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
 
 img,
 svg,
@@ -533,12 +405,9 @@ object {
   /* 2 */
 }
 
-/**
- * Constrain images and videos to the parent width and preserve
- * their intrinsic aspect ratio.
- *
- * https://github.com/mozdevs/cssremedy/issues/14
- */
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
 
 img,
 video {
@@ -546,65 +415,139 @@ video {
   height: auto;
 }
 
-/**
- * Ensure the default browser behavior of the `hidden` attribute.
- */
+/*
+Ensure the default browser behavior of the `hidden` attribute.
+*/
 
 [hidden] {
   display: none;
 }
 
 *, ::before, ::after {
-  --tw-border-opacity: 1;
-  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
 }
 
-h1{
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+h1 {
   font-size: 3.75rem;
   line-height: 1;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
+  color: rgb(41 65 75 / var(--tw-text-opacity));
 }
 
-h2{
+h2 {
   font-size: 3rem;
   line-height: 1;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
+  color: rgb(41 65 75 / var(--tw-text-opacity));
 }
 
-h3{
+h3 {
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
+  color: rgb(41 65 75 / var(--tw-text-opacity));
 }
 
-h4{
+h4 {
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
+  color: rgb(41 65 75 / var(--tw-text-opacity));
 }
 
-h5{
+h5 {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
+  color: rgb(41 65 75 / var(--tw-text-opacity));
 }
 
-h6{
+h6 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 600;
   --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
+  color: rgb(41 65 75 / var(--tw-text-opacity));
 }
 
 .pryg-btn {
@@ -612,15 +555,21 @@ h6{
   font-weight: 600;
   text-transform: uppercase;
   --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
+  color: rgb(41 65 75 / var(--tw-text-opacity));
 }
 
 @media (min-width: 1024px) {
   .pryg-btn {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .pryg-btn {
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
+  }
+
+  .pryg-btn {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
@@ -630,8 +579,14 @@ h6{
   .pryg-btn {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+  }
+
+  .pryg-btn {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+  }
+
+  .pryg-btn {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
@@ -660,9 +615,9 @@ h6{
   }
 }
 
-main a{
+main a {
   --tw-text-opacity: 1;
-  color: rgba(39, 142, 179, var(--tw-text-opacity))
+  color: rgb(39 142 179 / var(--tw-text-opacity));
 }
 
 .visible {
@@ -682,35 +637,20 @@ main a{
 }
 
 .sticky {
+  position: -webkit-sticky;
   position: sticky;
-}
-
-.top-20 {
-  top: 5rem;
 }
 
 .top-1\/3 {
   top: 33.333333%;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
+.left-1\/2 {
+  left: 50%;
 }
 
 .bottom-14 {
   bottom: 3.5rem;
-}
-
-.left-0 {
-  left: 0px;
 }
 
 .left-32 {
@@ -721,8 +661,72 @@ main a{
   left: 9rem;
 }
 
-.left-1\/2 {
-  left: 50%;
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.right-10 {
+  right: 2.5rem;
+}
+
+.top-20 {
+  top: 5rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.-top-20 {
+  top: -5rem;
+}
+
+.-right-20 {
+  right: -5rem;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.-top-32 {
+  top: -8rem;
+}
+
+.-top-40 {
+  top: -10rem;
+}
+
+.-top-56 {
+  top: -14rem;
+}
+
+.right-1 {
+  right: 0.25rem;
+}
+
+.-right-1 {
+  right: -0.25rem;
+}
+
+.-right-2 {
+  right: -0.5rem;
+}
+
+.right-2 {
+  right: 0.5rem;
 }
 
 .z-10 {
@@ -733,24 +737,63 @@ main a{
   grid-column: span 2 / span 2;
 }
 
-.col-span-4 {
-  grid-column: span 4 / span 4;
+.col-span-7 {
+  grid-column: span 7 / span 7;
 }
 
 .col-span-5 {
   grid-column: span 5 / span 5;
 }
 
-.col-span-7 {
-  grid-column: span 7 / span 7;
-}
-
 .col-span-8 {
   grid-column: span 8 / span 8;
 }
 
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-start-1 {
+  grid-column-start: 1;
+}
+
+.col-start-3 {
+  grid-column-start: 3;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
+}
+
+.col-end-2 {
+  grid-column-end: 2;
+}
+
+.col-end-3 {
+  grid-column-end: 3;
+}
+
 .m-4 {
   margin: 1rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mx-24 {
@@ -768,44 +811,54 @@ main a{
   margin-right: 15rem;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.mx-20 {
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
+.ml-5 {
+  margin-left: 1.25rem;
 }
 
 .mt-auto {
   margin-top: auto;
 }
 
+.mb-auto {
+  margin-bottom: auto;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
 }
 
-.mr-10 {
-  margin-right: 2.5rem;
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.ml-40 {
+  margin-left: 10rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mb-1 {
@@ -816,40 +869,32 @@ main a{
   margin-bottom: 1rem;
 }
 
-.mb-6 {
-  margin-bottom: 1.5rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mb-auto {
-  margin-bottom: auto;
-}
-
 .ml-4 {
   margin-left: 1rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
+.ml-0 {
+  margin-left: 0px;
 }
 
 .ml-20 {
   margin-left: 5rem;
 }
 
-.ml-40 {
-  margin-left: 10rem;
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .ml-80 {
   margin-left: 20rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
 }
 
 .block {
@@ -884,32 +929,72 @@ main a{
   display: none;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-16 {
   height: 4rem;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
-.h-56 {
-  height: 14rem;
+.h-screen {
+  height: 100vh;
 }
 
 .h-80 {
   height: 20rem;
 }
 
+.h-56 {
+  height: 14rem;
+}
+
+.h-60 {
+  height: 15rem;
+}
+
 .h-96 {
   height: 24rem;
 }
 
-.h-1\/2 {
-  height: 50%;
+.h-40 {
+  height: 10rem;
 }
 
-.h-screen {
-  height: 100vh;
+.h-32 {
+  height: 8rem;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-\[800px\] {
+  height: 800px;
+}
+
+.h-\[600px\] {
+  height: 600px;
+}
+
+.h-\[500px\] {
+  height: 500px;
+}
+
+.h-5 {
+  height: 1.25rem;
 }
 
 .w-24 {
@@ -920,8 +1005,12 @@ main a{
   width: 8rem;
 }
 
-.w-36 {
-  width: 9rem;
+.w-full {
+  width: 100%;
+}
+
+.w-2\/4 {
+  width: 50%;
 }
 
 .w-40 {
@@ -932,8 +1021,12 @@ main a{
   width: 20rem;
 }
 
-.w-2\/4 {
-  width: 50%;
+.w-36 {
+  width: 9rem;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-5\/6 {
@@ -944,113 +1037,124 @@ main a{
   width: 75%;
 }
 
-.w-full {
-  width: 100%;
+.w-20 {
+  width: 5rem;
 }
 
-.max-w-lg {
-  max-width: 32rem;
+.w-10 {
+  width: 2.5rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[800px\] {
+  width: 800px;
+}
+
+.w-\[600px\] {
+  width: 600px;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
+.w-5 {
+  width: 1.25rem;
 }
 
 .max-w-xl {
   max-width: 36rem;
 }
 
+.max-w-lg {
+  max-width: 32rem;
+}
+
+.rotate-45 {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-12 {
+  --tw-rotate: 12deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.skew-y-6 {
+  --tw-skew-y: 6deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.skew-y-3 {
+  --tw-skew-y: 3deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.skew-y-1 {
+  --tw-skew-y: 1deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.skew-x-0 {
+  --tw-skew-x: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.skew-y-0 {
+  --tw-skew-y: 0deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-skew-y-1 {
+  --tw-skew-y: -1deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .transform {
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-@-webkit-keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-@keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
-@-webkit-keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    -webkit-animation-timing-function: cubic-bezier(0.8,0,1,1);
-            animation-timing-function: cubic-bezier(0.8,0,1,1);
-  }
-
-  50% {
-    transform: none;
-    -webkit-animation-timing-function: cubic-bezier(0,0,0.2,1);
-            animation-timing-function: cubic-bezier(0,0,0.2,1);
-  }
-}
-
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .grid-cols-12 {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .justify-end {
@@ -1065,12 +1169,28 @@ main a{
   justify-content: space-between;
 }
 
+.justify-around {
+  justify-content: space-around;
+}
+
 .justify-items-start {
   justify-items: start;
 }
 
 .justify-items-end {
   justify-items: end;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.justify-items-stretch {
+  justify-items: stretch;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-3 {
@@ -1081,8 +1201,16 @@ main a{
   gap: 1rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
+.place-self-end {
+  place-self: end;
+}
+
+.place-self-center {
+  place-self: center;
+}
+
+.self-center {
+  align-self: center;
 }
 
 .justify-self-end {
@@ -1093,8 +1221,8 @@ main a{
   overflow: hidden;
 }
 
-.rounded {
-  border-radius: 0.25rem;
+.rounded-full {
+  border-radius: 9999px;
 }
 
 .rounded-lg {
@@ -1105,16 +1233,34 @@ main a{
   border-radius: 1rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-3xl {
   border-radius: 1.5rem;
 }
 
-.rounded-full {
-  border-radius: 9999px;
+.rounded-r-2xl {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.rounded-l-3xl {
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.rounded-bl-2xl {
+  border-bottom-left-radius: 1rem;
 }
 
 .rounded-tl-2xl {
   border-top-left-radius: 1rem;
+}
+
+.rounded-br-2xl {
+  border-bottom-right-radius: 1rem;
 }
 
 .rounded-tr-2xl {
@@ -1125,131 +1271,135 @@ main a{
   border-top-right-radius: 1.5rem;
 }
 
-.rounded-br-2xl {
-  border-bottom-right-radius: 1rem;
-}
-
-.rounded-bl-2xl {
-  border-bottom-left-radius: 1rem;
-}
-
 .border-2 {
   border-width: 2px;
 }
 
-.hover\:border-2:hover {
-  border-width: 2px;
+.border {
+  border-width: 1px;
 }
 
 .border-b-2 {
   border-bottom-width: 2px;
 }
 
-.hover\:border-solid:hover {
-  border-style: solid;
-}
-
-.border-pryg-yellow {
-  --tw-border-opacity: 1;
-  border-color: rgba(248, 188, 40, var(--tw-border-opacity));
-}
-
-.border-pryg-orange {
-  --tw-border-opacity: 1;
-  border-color: rgba(233, 91, 29, var(--tw-border-opacity));
-}
-
-.border-pryg-blue-v1 {
-  --tw-border-opacity: 1;
-  border-color: rgba(39, 142, 179, var(--tw-border-opacity));
+.border-l-\[20px\] {
+  border-left-width: 20px;
 }
 
 .border-pryg-blue-v2 {
   --tw-border-opacity: 1;
-  border-color: rgba(41, 65, 75, var(--tw-border-opacity));
+  border-color: rgb(41 65 75 / var(--tw-border-opacity));
 }
 
 .border-pryg-white-v1 {
   --tw-border-opacity: 1;
-  border-color: rgba(249, 249, 249, var(--tw-border-opacity));
+  border-color: rgb(249 249 249 / var(--tw-border-opacity));
 }
 
-.hover\:border-pryg-blue-v1:hover {
+.border-pryg-yellow {
   --tw-border-opacity: 1;
-  border-color: rgba(39, 142, 179, var(--tw-border-opacity));
+  border-color: rgb(248 188 40 / var(--tw-border-opacity));
 }
 
-.hover\:border-pryg-gray-v1:hover {
+.border-pryg-blue-v1 {
   --tw-border-opacity: 1;
-  border-color: rgba(99, 116, 128, var(--tw-border-opacity));
+  border-color: rgb(39 142 179 / var(--tw-border-opacity));
 }
 
-.bg-gray-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+.border-pryg-orange {
+  --tw-border-opacity: 1;
+  border-color: rgb(233 91 29 / var(--tw-border-opacity));
 }
 
-.bg-yellow-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(251, 191, 36, var(--tw-bg-opacity));
-}
-
-.bg-pryg-yellow {
-  --tw-bg-opacity: 1;
-  background-color: rgba(248, 188, 40, var(--tw-bg-opacity));
-}
-
-.bg-pryg-orange {
-  --tw-bg-opacity: 1;
-  background-color: rgba(233, 91, 29, var(--tw-bg-opacity));
-}
-
-.bg-pryg-blue-v1 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(39, 142, 179, var(--tw-bg-opacity));
-}
-
-.bg-pryg-blue-v2 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(41, 65, 75, var(--tw-bg-opacity));
-}
-
-.bg-pryg-gray-v1 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(99, 116, 128, var(--tw-bg-opacity));
-}
-
-.bg-pryg-white-v1 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(249, 249, 249, var(--tw-bg-opacity));
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
 .bg-pryg-white-v2 {
   --tw-bg-opacity: 1;
-  background-color: rgba(243, 243, 243, var(--tw-bg-opacity));
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-pryg-blue-v1:hover {
+.bg-pryg-white-v1 {
   --tw-bg-opacity: 1;
-  background-color: rgba(39, 142, 179, var(--tw-bg-opacity));
+  background-color: rgb(249 249 249 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-pryg-blue-v2:hover {
+.bg-pryg-yellow {
   --tw-bg-opacity: 1;
-  background-color: rgba(41, 65, 75, var(--tw-bg-opacity));
+  background-color: rgb(248 188 40 / var(--tw-bg-opacity));
+}
+
+.bg-pryg-blue-v1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 142 179 / var(--tw-bg-opacity));
+}
+
+.bg-pryg-blue-v2 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 65 75 / var(--tw-bg-opacity));
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
+}
+
+.bg-pryg-orange {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 91 29 / var(--tw-bg-opacity));
+}
+
+.bg-pryg-gray-v1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 116 128 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-hero-pattern {
   background-image: url('https://images.unsplash.com/photo-1464972377689-e7674c48d806?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2055&q=80');
 }
 
+.bg-\[url\(\'https\:\/\/images\.unsplash\.com\/photo-1614761064673-d8cb9645e715\?ixlib\=rb-1\.2\.1\&ixid\=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\&auto\=format\&fit\=crop\&w\=1167\&q\=80\'\)\] {
+  background-image: url('https://images.unsplash.com/photo-1614761064673-d8cb9645e715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80');
+}
+
+.bg-\[url\(\"https\:\/\/images\.unsplash\.com\/photo-1614761064673-d8cb9645e715\?ixlib\=rb-1\.2\.1\&ixid\=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\&auto\=format\&fit\=crop\&w\=1167\&q\=80\"\)\] {
+  background-image: url("https://images.unsplash.com/photo-1614761064673-d8cb9645e715?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80");
+}
+
 .bg-cover {
   background-size: cover;
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.p-16 {
+  padding: 4rem;
 }
 
 .p-5 {
@@ -1260,38 +1410,13 @@ main a{
   padding: 1.75rem;
 }
 
-.p-16 {
-  padding: 4rem;
+.p-4 {
+  padding: 1rem;
 }
 
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .py-4 {
@@ -1304,19 +1429,24 @@ main a{
   padding-bottom: 1.25rem;
 }
 
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .py-16 {
@@ -1324,19 +1454,53 @@ main a{
   padding-bottom: 4rem;
 }
 
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
-.py-24 {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
-.py-32 {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pt-10 {
@@ -1347,14 +1511,6 @@ main a{
   padding-top: 14rem;
 }
 
-.pr-10 {
-  padding-right: 2.5rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
 .pb-14 {
   padding-bottom: 3.5rem;
 }
@@ -1363,16 +1519,36 @@ main a{
   padding-bottom: 5rem;
 }
 
+.pl-10 {
+  padding-left: 2.5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
+}
+
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .pb-32 {
   padding-bottom: 8rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
+.pr-10 {
+  padding-right: 2.5rem;
 }
 
-.pl-10 {
-  padding-left: 2.5rem;
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pl-32 {
+  padding-left: 8rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .text-center {
@@ -1387,24 +1563,9 @@ main a{
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .text-2xl {
@@ -1412,13 +1573,34 @@ main a{
   line-height: 2rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
-.font-extralight {
-  font-weight: 200;
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-light {
@@ -1429,20 +1611,24 @@ main a{
   font-weight: 400;
 }
 
-.font-medium {
-  font-weight: 500;
-}
-
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-bold {
   font-weight: 700;
 }
 
 .font-extrabold {
   font-weight: 800;
+}
+
+.font-extralight {
+  font-weight: 200;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -1465,116 +1651,109 @@ main a{
   letter-spacing: 0.025em;
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.text-gray-100 {
-  --tw-text-opacity: 1;
-  color: rgba(243, 244, 246, var(--tw-text-opacity));
-}
-
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgba(229, 231, 235, var(--tw-text-opacity));
-}
-
-.text-gray-500 {
-  --tw-text-opacity: 1;
-  color: rgba(107, 114, 128, var(--tw-text-opacity));
-}
-
-.text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgba(17, 24, 39, var(--tw-text-opacity));
-}
-
-.text-pryg-yellow {
-  --tw-text-opacity: 1;
-  color: rgba(248, 188, 40, var(--tw-text-opacity));
-}
-
-.text-pryg-orange {
-  --tw-text-opacity: 1;
-  color: rgba(233, 91, 29, var(--tw-text-opacity));
-}
-
-.text-pryg-blue-v1 {
-  --tw-text-opacity: 1;
-  color: rgba(39, 142, 179, var(--tw-text-opacity));
-}
-
-.text-pryg-blue-v2 {
-  --tw-text-opacity: 1;
-  color: rgba(41, 65, 75, var(--tw-text-opacity));
-}
-
 .text-pryg-gray-v1 {
   --tw-text-opacity: 1;
-  color: rgba(99, 116, 128, var(--tw-text-opacity));
-}
-
-.text-pryg-white-v1 {
-  --tw-text-opacity: 1;
-  color: rgba(249, 249, 249, var(--tw-text-opacity));
+  color: rgb(99 116 128 / var(--tw-text-opacity));
 }
 
 .text-pryg-white-v2 {
   --tw-text-opacity: 1;
-  color: rgba(243, 243, 243, var(--tw-text-opacity));
+  color: rgb(243 243 243 / var(--tw-text-opacity));
 }
 
-.hover\:text-pryg-yellow:hover {
+.text-pryg-white-v1 {
   --tw-text-opacity: 1;
-  color: rgba(248, 188, 40, var(--tw-text-opacity));
+  color: rgb(249 249 249 / var(--tw-text-opacity));
 }
 
-.hover\:text-pryg-blue-v1:hover {
+.text-gray-900 {
   --tw-text-opacity: 1;
-  color: rgba(39, 142, 179, var(--tw-text-opacity));
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
-.hover\:text-pryg-white-v1:hover {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgba(249, 249, 249, var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
+}
+
+.text-pryg-blue-v2 {
+  --tw-text-opacity: 1;
+  color: rgb(41 65 75 / var(--tw-text-opacity));
+}
+
+.text-pryg-blue-v1 {
+  --tw-text-opacity: 1;
+  color: rgb(39 142 179 / var(--tw-text-opacity));
+}
+
+.text-pryg-orange {
+  --tw-text-opacity: 1;
+  color: rgb(233 91 29 / var(--tw-text-opacity));
+}
+
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-pryg-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(248 188 40 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
   opacity: 0;
 }
 
-.group:hover .group-hover\:opacity-100 {
-  opacity: 1;
-}
-
-*, ::before, ::after {
-  --tw-shadow: 0 0 #0000;
-}
-
 .shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.hover\:shadow-2xl:hover {
-  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+.ring-1 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-*, ::before, ::after {
-  --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgba(59, 130, 246, 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
+.ring-2 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-pryg-gray-v1 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(99 116 128 / var(--tw-ring-opacity));
+}
+
+.ring-offset-8 {
+  --tw-ring-offset-width: 8px;
+}
+
+.ring-offset-2 {
+  --tw-ring-offset-width: 2px;
+}
+
+.ring-offset-1 {
+  --tw-ring-offset-width: 1px;
 }
 
 .transition {
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1592,6 +1771,115 @@ main a{
 .splide__slide img {
   width: 100%;
   height: auto;
+}
+
+.vertical_writing_mode {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+}
+
+.hover\:bottom-0:hover {
+  bottom: 0px;
+}
+
+.hover\:translate-x-4:hover {
+  --tw-translate-x: 1rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:rotate-45:hover {
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:border-2:hover {
+  border-width: 2px;
+}
+
+.hover\:border-solid:hover {
+  border-style: solid;
+}
+
+.hover\:border-pryg-gray-v1:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(99 116 128 / var(--tw-border-opacity));
+}
+
+.hover\:border-pryg-blue-v1:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(39 142 179 / var(--tw-border-opacity));
+}
+
+.hover\:bg-pryg-blue-v1:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 142 179 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-pryg-blue-v2:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 65 75 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-pryg-orange:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 91 29 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-pryg-yellow:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 188 40 / var(--tw-bg-opacity));
+}
+
+.hover\:font-bold:hover {
+  font-weight: 700;
+}
+
+.hover\:font-extrabold:hover {
+  font-weight: 800;
+}
+
+.hover\:text-pryg-yellow:hover {
+  --tw-text-opacity: 1;
+  color: rgb(248 188 40 / var(--tw-text-opacity));
+}
+
+.hover\:text-pryg-white-v1:hover {
+  --tw-text-opacity: 1;
+  color: rgb(249 249 249 / var(--tw-text-opacity));
+}
+
+.hover\:text-pryg-blue-v1:hover {
+  --tw-text-opacity: 1;
+  color: rgb(39 142 179 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-pryg-orange:hover {
+  --tw-text-opacity: 1;
+  color: rgb(233 91 29 / var(--tw-text-opacity));
+}
+
+.hover\:text-pryg-blue-v2:hover {
+  --tw-text-opacity: 1;
+  color: rgb(41 65 75 / var(--tw-text-opacity));
+}
+
+.hover\:shadow-2xl:hover {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus\:border-b-2:focus {
+  border-bottom-width: 2px;
+}
+
+.group:hover .group-hover\:opacity-100 {
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
@@ -1620,14 +1908,14 @@ main a{
     text-align: center;
   }
 
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -1649,12 +1937,16 @@ main a{
     margin-left: 5rem;
   }
 
+  .md\:h-96 {
+    height: 24rem;
+  }
+
   .md\:h-64 {
     height: 16rem;
   }
 
-  .md\:h-96 {
-    height: 24rem;
+  .md\:w-7\/12 {
+    width: 58.333333%;
   }
 
   .md\:w-5\/12 {
@@ -1663,10 +1955,6 @@ main a{
 
   .md\:w-6\/12 {
     width: 50%;
-  }
-
-  .md\:w-7\/12 {
-    width: 58.333333%;
   }
 
   .md\:max-w-sm {
@@ -1697,6 +1985,26 @@ main a{
     left: -0.75rem;
   }
 
+  .lg\:ml-\[30rem\] {
+    margin-left: 30rem;
+  }
+
+  .lg\:ml-\[10rem\] {
+    margin-left: 10rem;
+  }
+
+  .lg\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
+  .lg\:ml-32 {
+    margin-left: 8rem;
+  }
+
+  .lg\:ml-40 {
+    margin-left: 10rem;
+  }
+
   .lg\:h-16 {
     height: 4rem;
   }
@@ -1705,20 +2013,24 @@ main a{
     height: 100%;
   }
 
+  .lg\:h-96 {
+    height: 24rem;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
 
-  .lg\:max-w-2xl {
-    max-width: 42rem;
+  .lg\:w-96 {
+    width: 24rem;
   }
 
   .lg\:max-w-screen-xl {
     max-width: 1280px;
   }
 
-  .lg\:hover\:-translate-y-2:hover {
-    --tw-translate-y: -0.5rem;
+  .lg\:max-w-2xl {
+    max-width: 42rem;
   }
 
   .lg\:grid-cols-4 {
@@ -1729,14 +2041,14 @@ main a{
     padding: 0.75rem;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:py-20 {
@@ -1744,17 +2056,30 @@ main a{
     padding-bottom: 5rem;
   }
 
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:pr-32 {
     padding-right: 8rem;
   }
 
-  .lg\:text-left {
-    text-align: left;
+  .lg\:pt-28 {
+    padding-top: 7rem;
   }
 
-  .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+  .lg\:pl-28 {
+    padding-left: 7rem;
+  }
+
+  .lg\:text-left {
+    text-align: left;
   }
 
   .lg\:text-3xl {
@@ -1762,15 +2087,103 @@ main a{
     line-height: 2.25rem;
   }
 
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .lg\:hover\:-translate-y-2:hover {
+    --tw-translate-y: -0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 }
 
 @media (min-width: 1280px) {
   .xl\:left-10 {
     left: 2.5rem;
+  }
+
+  .xl\:mx-60 {
+    margin-left: 15rem;
+    margin-right: 15rem;
+  }
+
+  .xl\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
+  .xl\:ml-10 {
+    margin-left: 2.5rem;
+  }
+
+  .xl\:ml-56 {
+    margin-left: 14rem;
+  }
+
+  .xl\:ml-96 {
+    margin-left: 24rem;
+  }
+
+  .xl\:ml-\[\] {
+    margin-left: ;
+  }
+
+  .xl\:ml-\[150px\] {
+    margin-left: 150px;
+  }
+
+  .xl\:ml-\[20rem\] {
+    margin-left: 20rem;
+  }
+
+  .xl\:ml-\[60rem\] {
+    margin-left: 60rem;
+  }
+
+  .xl\:ml-\[50rem\] {
+    margin-left: 50rem;
+  }
+
+  .xl\:ml-\[40rem\] {
+    margin-left: 40rem;
+  }
+
+  .xl\:ml-\[45rem\] {
+    margin-left: 45rem;
+  }
+
+  .xl\:ml-\[42rem\] {
+    margin-left: 42rem;
+  }
+
+  .xl\:ml-\[36rem\] {
+    margin-left: 36rem;
+  }
+
+  .xl\:ml-\[32rem\] {
+    margin-left: 32rem;
+  }
+
+  .xl\:ml-\[36srem\] {
+    margin-left: 36srem;
+  }
+
+  .xl\:ml-\[33rem\] {
+    margin-left: 33rem;
+  }
+
+  .xl\:ml-\[35rem\] {
+    margin-left: 35rem;
   }
 
   .xl\:h-20 {
@@ -1785,17 +2198,82 @@ main a{
     height: 24rem;
   }
 
+  .xl\:h-\[500px\] {
+    height: 500px;
+  }
+
+  .xl\:w-\[500px\] {
+    width: 500px;
+  }
+
   .xl\:p-4 {
     padding: 1rem;
+  }
+
+  .xl\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .xl\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .xl\:pr-48 {
     padding-right: 12rem;
   }
 
+  .xl\:pr-10 {
+    padding-right: 2.5rem;
+  }
+
+  .xl\:pt-32 {
+    padding-top: 8rem;
+  }
+
+  .xl\:pl-32 {
+    padding-left: 8rem;
+  }
+
+  .xl\:pl-40 {
+    padding-left: 10rem;
+  }
+
+  .xl\:pl-44 {
+    padding-left: 11rem;
+  }
+
+  .xl\:pl-96 {
+    padding-left: 24rem;
+  }
+
+  .xl\:pl-72 {
+    padding-left: 18rem;
+  }
+
+  .xl\:text-left {
+    text-align: left;
+  }
+
   .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
@@ -1816,9 +2294,9 @@ main a{
     padding-right: 13rem;
   }
 
-  .\32xl\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .\32xl\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
   }
 
   .\32xl\:text-3xl {
@@ -1836,8 +2314,8 @@ main a{
     line-height: 1;
   }
 
-  .\32xl\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
+  .\32xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
