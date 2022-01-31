@@ -67,3 +67,8 @@ function ctara_prayog_tailwindcss_theme_theme_suggestions_page_alter(array &$sug
 
   $suggestions[] = 'page__path_alias__'.$path_alias;
 }
+
+//Adding base path to block template
+function  ctara_prayog_tailwindcss_theme_theme_preprocess_block__bundle__pryg_our_strategy_block(&$variables, $hook) {
+    $variables['base_path'] = base_path();
+}

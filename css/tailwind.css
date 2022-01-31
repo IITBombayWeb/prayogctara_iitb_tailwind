@@ -32,6 +32,13 @@
     main a{
         @apply text-pryg-blue-v1
     }
+
+    div[aria-label='Error message'] {
+        @apply  container mx-auto text-center mt-4 bg-red-300 p-5 border-2 border-red-500 rounded-lg
+    }
+    div[aria-label='Status message'] {
+        @apply  container mx-auto text-center mt-4 bg-green-300 p-5 border-2 border-green-500 rounded-lg
+    }
 }
 
 .splide__slide img {
