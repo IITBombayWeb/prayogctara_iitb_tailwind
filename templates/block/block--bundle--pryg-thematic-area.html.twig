@@ -11,7 +11,7 @@
     'ring-offset-1'
 ] %}
 <div {{attributes}}>
-<section class="py-32">
+<section class="py-56">
     <div class="grid h-[600px]">
         <div class="grid bg-pryg-yellow skew-y-1">
             <div class="bg-pryg-white-v2 h-[600px] -skew-y-1 relative rounded-3xl">
@@ -20,8 +20,10 @@
                 </div>
                 <div class="grid lg:pt-28 lg:pl-28 xl:pt-32 xl:pl-72">
                     <div class="flex">
+                        {{ title_prefix }}                        
                         <h2 class="text-2xl font-extrabold text-pryg-blue-v2 sm:text-5xl md:text-xl 2xl:text-4xl">{{label}}
                         </h2>
+                        {{ title_suffix }}
                         <hr class="w-40 border-t-1 border-pryg-blue-v2 pl-10 place-self-end ml-10">
                         <div class="h-5 w-5 rounded-full bg-pryg-blue-v1 lg:ml-40 xl:ml-[36rem] place-self-center"></div>
                     </div>

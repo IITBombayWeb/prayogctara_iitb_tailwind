@@ -52,7 +52,8 @@
     'pl-10'
 ] %}
 <div {{attributes}}> 
-<section class="h-60 xl:h-80 bg-pryg-yellow grid grid-cols-12">   
+<section class="py-20">
+<div class="h-60 xl:h-80 bg-pryg-yellow grid grid-cols-12">   
     <div class="h-60 xl:h-80 col-span-8 left-0 bg-pryg-blue-v2 border-l-[20px] border-pryg-blue-v1 rounded-r-2xl z-10">
         <div class="grid h-60 xl:h-80">
             <div class="place-self-center mx-20  xl:mx-60">
@@ -75,5 +76,6 @@
     <div class="col-span-4 relative">
         <img class="absolute right-5 object-cover h-60 xl:h-80 w-full" src={{file_url(content.field_image.0['#item'].entity.uri.value) }} alt={{ content.field_image['#items'].alt }}>
     </div>
+</div>
 </section>
 </div>
