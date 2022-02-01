@@ -33,7 +33,7 @@
     (label|length < '15') ? 'pr-4' : 'px-32',
     'text-' ~  headline_color,
 ] %}
-
+{% set image_style = (label|length < '15') ? 'justify-items-center place-items-center' : 'justify-items-end place-items-center' %}
 {% set content_style = [
     (label|length < '15') ? '' : 'lg:40 xl:ml-56',
 ] %}
@@ -62,7 +62,7 @@
     {% block content %}
         {% if "On" in content.field_align_image_left.0 %} 
             <div class="grid grid-cols-2">
-                 <div class="grid justify-items-center place-items-center">
+                 <div class="{{  image_style ~ ' grid '}}">
                     {% if content.field_image.0 %}
                     <img src="{{file_url(content.field_image.0['#item'].entity.uri.value) }}" alt={{content.field_image['#items'].alt}} class="object-fill">
                     {% endif %}
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid justify-items-center place-items-center">
+                <div class="{{  image_style ~ ' grid '}}">
                     {% if content.field_image.0 %}
                     <img src="{{file_url(content.field_image.0['#item'].entity.uri.value) }}" alt={{content.field_image['#items'].alt}} class="object-fill">
                     {% endif %}

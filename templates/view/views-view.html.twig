@@ -30,28 +30,43 @@
  * @see template_preprocess_views_view()
  */
 #}
+
+
 {%
   set classes = [
     dom_id ? 'js-view-dom-id-' ~ dom_id,
     'pryg-container',
   ]
 %}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title }}
   {{ title_suffix }}
 
   {% if header %}
+    {% if header|render|striptags|trim|lower == 'process' %}
+        {% set category_color = 'pryg-orange' %} 
+        {% set fill = '#e95b1d' %} 
+    {% elseif header|render|striptags|trim|lower == 'policy'%}
+        {% set category_color = 'pryg-yellow' %}
+        {% set fill = '#F8BC28' %}
+    {% elseif header|render|striptags|trim|lower == 'product'%}
+        {% set category_color = 'pryg-blue-v1' %}
+        {% set fill = '#278EB3' %}
+    {% else %}
+        {% set category_color = 'pryg-gray-v1' %}
+    {% endif %}
+    
     <header>
        <div class="flex py-5 relative">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50px" viewBox="-0.5 -0.5 77 77" style="max-width:100%;max-height:50px; position:absolute; left:-80px; top:10px"><defs/><g><path d="M 38.07 11 L 65.07 38 L 38.07 65 L 11.07 38 Z" fill="#278eb3" stroke="none" transform="rotate(55,38.07,38)" pointer-events="all"/></g></svg>
-            <span class="text-3xl font-semibold text-pryg-blue-v1">{{ header }}</span>
-             <hr class="my-10 w-80 border-t-1 border-pryg-blue-v2">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50px" viewBox="-0.5 -0.5 77 77" style="max-width:100%;max-height:50px; position:absolute; left:-80px; top:10px"><defs/><g><path d="M 38.07 11 L 65.07 38 L 38.07 65 L 11.07 38 Z" fill="{{fill}}" stroke="none" transform="rotate(55,38.07,38)" pointer-events="all"/></g></svg>
+            <span class="{{ 'text-3xl font-semibold text-' ~ category_color}}">{{ header }}</span>
+             <hr class="{{ 'my-10 w-80 border-t-1 border-' ~ category_color}}">
             {# <span class="ml-4 italic text-3xl font-light text-pryg-blue-v1">
                 Media
             </span> #}
         </div>
-      
     </header>
   {% endif %}
 
