@@ -21,3 +21,4 @@ libraries:
   - ctara_prayog_tailwindcss_theme/global-styling
   - ctara_prayog_tailwindcss_theme/splidejs
   - ctara_prayog_tailwindcss_theme/autoSizeSlider
+  - ctara_prayog_tailwindcss_theme/teamSection

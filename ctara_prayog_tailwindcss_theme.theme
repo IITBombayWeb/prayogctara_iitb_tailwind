@@ -1,6 +1,6 @@
 <?php
 
-function ctara_prayog_tailwindcss_theme_theme_preprocess_menu(&$variables) {
+function ctara_prayog_tailwindcss_theme_preprocess_menu(&$variables) {
   try {
       $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
   }
@@ -9,7 +9,7 @@ function ctara_prayog_tailwindcss_theme_theme_preprocess_menu(&$variables) {
   }
 }
 
-function ctara_prayog_tailwindcss_theme_theme_preprocess_block__system_branding_block(&$variables) {
+function ctara_prayog_tailwindcss_theme_preprocess_block__system_branding_block(&$variables) {
   try {
       $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
   }

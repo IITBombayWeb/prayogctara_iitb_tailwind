@@ -35,10 +35,14 @@
 {% endif %}
 
 <div class="p-5">
-  <span class="text-base  font-medium text-pryg-yellow" >{{ fields.field_event_type.content  }} | {% if field_paid_event.content %} {{ fields.field_event_fees.content }}{% else %} Free Event {% endif %}</span> 
-  <h2 class="align-bottom text-2xl font-semibold hover:text-pryg-white-v1">{{ fields.title.content }}</h2>
+  <span class="text-base  font-medium text-pryg-yellow capitalize" >{{ fields.field_event_type.content  }} | {% if field_paid_event.content %} {{ fields.field_event_fees.content }}{% else %} Free Event {% endif %}</span> 
+  <h2 class="align-bottom text-2xl font-semibold hover:text-pryg-white-v1 capitalize">{{ fields.title.content | striptags }}</h2>
   <p class="py-4"> {{fields.body.content|striptags }} </p> 
 
   <h4>{% if fields.field_event_venue.content %}{{ fields.field_event_venue.content }} {% endif %}</h4>
-  <span class="text-base  font-medium flex">{{fields.field_start_date.content}}<hr class="my-5 ml-4 w-40 border-t-1 border-pryg-blue-v2"></span> 
+  <span class="text-base  font-medium flex">Start Date | {{fields.field_start_date.content}}</span> 
+  {% if fields.field_end_date %}}
+  <span class="text-base  font-medium flex">End Date | {{fields.field_end_date.content}}</span> 
+  {% endif %}
+  
 </div>

@@ -1,0 +1,11 @@
+{{ attach_library('ctara_prayog_tailwindcss_theme/teamSection') }}
+{% set index = row.index + 1 %}
+<div  class="profile">
+    <div class="relative overflow-hidden transition duration-300 transform rounded-2xl group shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
+        <img class="object-cover rounded w-full h-56 md:h-64 xl:h-80" src="{{ fields.field_image.content|striptags }}" alt="Person" />
+        <div class="absolute flex flex-col bottom-0 left-0 right-0 justify-center text-center transition-opacity duration-300 bg-yellow-400 opacity-0 group-hover:opacity-100">
+            <p class="mb-1 text-lg font-bold text-gray-100">{{ fields.title.content|striptags }}</p>
+            <h6 class="mb-4 text-xs text-gray-100">{{ fields.field_designation.content|striptags }}</h6>
+        </div>
+    </div>
+</div>

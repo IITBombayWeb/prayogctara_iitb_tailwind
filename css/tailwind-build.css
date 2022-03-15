@@ -621,6 +621,12 @@ main a {
   color: rgb(39 142 179 / var(--tw-text-opacity));
 }
 
+.view-grid:hover a {
+  text-transform: capitalize;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 div[aria-label='Error message'] {
   width: 100%;
 }
@@ -862,6 +868,11 @@ div[aria-label='Status message'] {
   margin-right: 5rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -1014,6 +1025,10 @@ div[aria-label='Status message'] {
   height: 24rem;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
 .h-32 {
   height: 8rem;
 }
@@ -1056,6 +1071,10 @@ div[aria-label='Status message'] {
 
 .w-5\/6 {
   width: 83.333333%;
+}
+
+.w-64 {
+  width: 16rem;
 }
 
 .w-32 {
@@ -1107,6 +1126,14 @@ div[aria-label='Status message'] {
 
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1250,6 +1277,11 @@ div[aria-label='Status message'] {
   border-color: rgb(39 142 179 / var(--tw-border-opacity));
 }
 
+.border-pryg-gray-v1 {
+  --tw-border-opacity: 1;
+  border-color: rgb(99 116 128 / var(--tw-border-opacity));
+}
+
 .border-pryg-orange {
   --tw-border-opacity: 1;
   border-color: rgb(233 91 29 / var(--tw-border-opacity));
@@ -1337,6 +1369,10 @@ div[aria-label='Status message'] {
 
 .p-7 {
   padding: 1.75rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .py-12 {
@@ -1564,6 +1600,14 @@ div[aria-label='Status message'] {
   line-height: 1;
 }
 
+.leading-7 {
+  line-height: 1.75rem;
+}
+
+.leading-10 {
+  line-height: 2.5rem;
+}
+
 .tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -1625,6 +1669,11 @@ div[aria-label='Status message'] {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-pryg-yellow {
@@ -1711,6 +1760,11 @@ div[aria-label='Status message'] {
 .hover\:border-pryg-blue-v1:hover {
   --tw-border-opacity: 1;
   border-color: rgb(39 142 179 / var(--tw-border-opacity));
+}
+
+.hover\:border-pryg-white-v1:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(249 249 249 / var(--tw-border-opacity));
 }
 
 .hover\:bg-pryg-blue-v1:hover {
@@ -1895,6 +1949,10 @@ div[aria-label='Status message'] {
     height: 24rem;
   }
 
+  .lg\:h-12 {
+    height: 3rem;
+  }
+
   .lg\:h-full {
     height: 100%;
   }
@@ -2022,6 +2080,10 @@ div[aria-label='Status message'] {
 
   .xl\:h-\[500px\] {
     height: 500px;
+  }
+
+  .xl\:h-16 {
+    height: 4rem;
   }
 
   .xl\:w-\[500px\] {

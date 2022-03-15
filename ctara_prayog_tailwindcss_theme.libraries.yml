@@ -27,3 +27,13 @@ autoSizeSlider:
     js/autoSizeSlider.js: {}
   dependencies:
     - ctara_prayog_tailwindcss_theme/splidejs
+
+teamSection: 
+  version: 1.x
+  js:
+    js/teamSection.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
