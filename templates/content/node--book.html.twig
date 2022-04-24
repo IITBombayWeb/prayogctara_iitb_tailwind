@@ -70,40 +70,30 @@
  *   in different view modes.
  */
 #}
-{% set tailwindClassesTitle = [
-    'text-pryg-blue-v2',
-    'mr-10'
-] %}
-<article{{ attributes.addClass('pryg-container') }}>
-  <div class="grid grid-cols-6 my-2">
-    <div class="col-span-1 rounded-2xl bg-pryg-gray-v1">
-      <img class=" h-72 w-64 rounded-2xl"  src={{ file_url(content.field_image['#items'].entity.uri.value) }} alt="">
-    </div>
-    <div class="col-span-5 bg-pryg-white-v2 p-4 rounded-r-2xl">
-      <div class="grid grid-cols-4">
-        <div class="p-1">
-          <div class="my-2">
-            <h4 class=""> {{ node.title.value }}</h4>
-            <p class="text-pryg-gray-v1 italic text-2xl"> {{ node.field_designation.value }}</p>
-          </div>
-        </div>
-        <div class="col-span-2 p-1">
-          {% if node.body.value %}
-          <p class=" tracking-wide leading-7 text-pryg-gray-v1">{{ node.body.value|striptags}}</p>
-          {% endif %}
-        </div>
-        <div class="p-1">
-          <div class="text-black leading-10 font-medium">
-            {{ node.field_team_email.value }}
-          </div>
-           <div class="text-black leading-10 font-medium">
-            {{ node.field_contact_number.value }}
-          </div>
-        </div>
+<article{{ attributes.addClass('pryg-container ') }}>
+
+  {{ title_prefix }}
+  {% if label and not page %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if display_submitted %}
+    <footer>
+      {{ author_picture }}
+      <div{{ author_attributes }}>
+        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        {{ metadata }}
       </div>
-    </div>
-  </div> 
-  
-   
-   
+    </footer>
+  {% endif %}
+
+  <div{{ content_attributes.addClass('grid grid-cols-12 gap-4 py-10') }}>
+   <div class="col-span-3 bg-pryg-gray-v2 p-2">{{ drupal_block('book_navigation') }}</div>
+    <div class="col-span-9 p-2">{{ content.body }}</div>
+  </div>
+  <div class="p-2">{{ content.book_navigation }}</div>
+
 </article>
