@@ -38,7 +38,6 @@
     'grid-cols-1',
     'px-2',
     'sm:px-0',
-    'sm:grid-cols-4',
     'sm:grid-cols-' ~ options.columns,
     'gap-4', 
     'py-4',
@@ -49,6 +48,7 @@
   {%  
     set unbuild_Classes = [
       'grid-cols-4',
+      'hidden'
     ]
   %}
 
@@ -120,3 +120,5 @@
     {% endfor %}
   {# {% endif %} #}
 </div>
+
+<div {{ attributes.addClass('unbuild_Classes') }}></div>
