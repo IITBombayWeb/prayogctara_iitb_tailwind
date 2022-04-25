@@ -35,12 +35,22 @@
 {% 
     set classes = [
     'grid', 
-    'grid-cols-' ~ options.columns,
+    'grid-cols-1',
+    'px-2',
+    'sm:px-0',
+    'sm:grid-cols-4',
+    'sm:grid-cols-' ~ options.columns,
     'gap-4', 
     'py-4',
   ]
-
 %}
+
+{# This class is set to add twig dynamic classes. #}
+  {%  
+    set unbuild_Classes = [
+      'grid-cols-4',
+    ]
+  %}
 
 {% if options.row_class_default %}
   {%

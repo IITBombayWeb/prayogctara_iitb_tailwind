@@ -1,20 +1,20 @@
 <footer class="h-1/2 bg-pryg-white-v2">
     <div class="pryg-container py-12">
-        <div class="grid grid-cols-3">
+        <div class="grid grid-cols-1 p-2 sm:p-0 sm:grid-cols-3">
             <!--Footer Logo & Info Section-->
             <div class="col-span-2">
-                <img class="lg:h-16 xl:h-20 2xl:h-24" src="{{ base_path ~ directory }}/assets/images/misc/logo/prayog-logo-without-bg.png" alt="">
-                <hr class="my-10 w-24 border-t-1 border-pryg-blue-v2">
+                <img class="h-16lg:h-16 xl:h-20 2xl:h-24" src="{{ base_path ~ directory }}/assets/images/misc/logo/prayog-logo-without-bg.png" alt="">
+                <hr class="hidden sm:block my-10 w-24 border-t-1 border-pryg-blue-v2">
                 <div class="text-pryg-gray-v2 font-light">
-                    <h4>Transforming lives through technolgy</h4>
-                    <p class="py-4">
+                    <h4 class="text-center sm:text-left py-4 sm:py-0">Transforming lives through technolgy</h4>
+                    <p class="py-4 text-center sm:text-left">
                         Centre for Technology Alternatives for Rural Areas<br>
                         Indian Institute of Technology (IIT), Bombay, Powai, Mumbai 400076.
                     </p>
                 </div>
             </div>
             <!--Footer Contact Section & Social Menu-->
-            <div class="grid grid-cols-2 font-light">
+            <div class="grid grid-cols-2 font-light px-3">
                 <!-- Contact Info-->
                 <div class="text-pryg-gray-v2">
                     <div>
@@ -34,8 +34,8 @@
                 </div>
             </div>
         </div>
-        <div class="pt-5 grid grid-cols-2 text-pryg-gray-v2">
-            <p>©2021</p>
+        <div class="pt-5 grid grid-cols-1 sm:grid-cols-2 text-pryg-gray-v2">
+            <p class="text-center">©2021 All copy rights reserved by Paryog IIT Bombay.</p>
             {{ page.footer_menu }}
         </div>
     </div>

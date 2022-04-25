@@ -38,11 +38,12 @@
   {% import _self as menus %}
   {% if is_front %}
     {% set tailwindClassesUL = [
-    'flex',
+    'xl:flex',
     'text-pryg-white-v2',
     'text-xl',
     'font-semibold',
-    'uppercase'
+    'uppercase',
+    'hidden',
     ] %}
   {% else %}
     {% set tailwindClassesUL = [

@@ -10,7 +10,8 @@
     {%
         set padding = [
             'grid',
-            'ml-20' 
+            'px-2',
+            'sm:ml-20' 
         ]
     %}
 {% else %}
@@ -29,8 +30,8 @@
 {% endif %}
 
 {% set heading_style = [
-    (label|length < '15') ? 'lg:text-5xl xl-text-6xl' : 'lg:text-2xl xl:text-3xl',
-    (label|length < '15') ? 'pr-4' : 'px-32',
+    (label|length < '15') ? 'text-xl lg:text-5xl xl-text-6xl' : 'text-xl lg:text-2xl xl:text-3xl',
+    (label|length < '15') ? 'pr-4' : 'px-2 sm:px-32',
     'text-' ~  headline_color,
 ] %}
 {% set image_style = (label|length < '15') ? 'justify-items-center place-items-center' : 'justify-items-end place-items-center' %}
@@ -43,7 +44,9 @@
     'w-36',
     'border-1',
     'border-' ~ headline_color,
-    'place-self-end'
+    'place-self-end',
+    'hidden',
+    'sm:block',
 ] %}
 
 {% set classesTORemove = [
@@ -61,7 +64,7 @@
 <section class="py-20">
     {% block content %}
         {% if "On" in content.field_align_image_left.0 %} 
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2">
                  <div class="{{  image_style ~ ' grid '}}">
                     {% if content.field_image.0 %}
                     <img src="{{file_url(content.field_image.0['#item'].entity.uri.value) }}" alt={{content.field_image['#items'].alt}} class="object-fill">
@@ -69,7 +72,7 @@
                     {# {{file_url(content.field_image.0['#item'].entity.uri.value) }} #}
                 </div>
                 <div {{attributes.addClass(padding).removeClass(['pryg-container', 'layout-builder-block', 'contextual-region', 'js-layout-builder-block'])}}>
-                    <div class="py-10 flex text-pryg-white-v2">
+                    <div class="py-10 flex text-pryg-white-v2 mx-auto sm:mx-0">
                         {{title_prefix}}
                         <h2 {{  title_attributes.addClass(heading_style) }}>{{ label }}</h2>
                         {{title_suffix}}
@@ -84,7 +87,7 @@
             </div>
             
         {% else %}
-            <div class="grid grid-cols-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2">
                 <div {{attributes.addClass(padding).removeClass(['pryg-container', 'layout-builder-block', 'contextual-region', 'js-layout-builder-block'])}}>
                     <div class="py-10 flex text-pryg-white-v2">
                         {{title_prefix}}

@@ -72,7 +72,9 @@
 #}
 {% set tailwindClassesTitle = [
     'text-pryg-blue-v2',
-    'mr-10'
+    'sm:mr-10',
+    'mx-2',
+    
 ] %}
 <article{{ attributes.addClass('pryg-container') }}>
   {% if label %}
@@ -81,14 +83,14 @@
     </h2>
   {% endif %}
     <div class="py-10">
-        <div class="mr-10 py-4">
+        <div class="mx-2 sm:mr-10 py-4">
             {% if node.field_image.entity.fileuri %}
-            <img class="h-96 w-5/6 rounded-2xl object-cover" src="{{ file_url(node.field_image.entity.fileuri) }}" alt="{{ node.field_image.alt }}">
+            <img class="h-96 w-full sm:w-5/6 rounded-2xl object-cover" src="{{ file_url(node.field_image.entity.fileuri) }}" alt="{{ node.field_image.alt }}">
             {% else %}
-            <img class="h-96 w-5/6 rounded-2xl object-cover" src="https://images.unsplash.com/photo-1509580357930-a711cf9d888d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80" alt="">
-            {% endif %}
+            <img class="h-96 w-full sm:w-5/6 rounded-2xl object-cover" src="https://images.unsplash.com/photo-1509580357930-a711cf9d888d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80" alt="">
+            {% endif %} 
         </div>
-        <div class="grid grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 px-2 sm:px-0">
             <div class="">
               <div>
                 <h6 class="py-5 px-4 bg-pryg-blue-v1 text-pryg-white-v1">Thematic Areas</h6>

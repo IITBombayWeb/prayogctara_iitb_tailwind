@@ -881,6 +881,11 @@ div[aria-label='Status message'] {
   margin-bottom: 0.5rem;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -955,6 +960,10 @@ div[aria-label='Status message'] {
 
 .ml-80 {
   margin-left: 20rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
 }
 
 .block {
@@ -1039,6 +1048,10 @@ div[aria-label='Status message'] {
 
 .h-32 {
   height: 8rem;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .w-24 {
@@ -1345,11 +1358,6 @@ div[aria-label='Status message'] {
   background-color: rgb(99 116 128 / var(--tw-bg-opacity));
 }
 
-.bg-gray-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
-}
-
 .bg-hero-pattern {
   background-image: url('https://images.unsplash.com/photo-1464972377689-e7674c48d806?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2055&q=80');
 }
@@ -1481,9 +1489,14 @@ div[aria-label='Status message'] {
   padding-right: 1.25rem;
 }
 
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pt-5 {
@@ -1879,12 +1892,45 @@ div[aria-label='Status message'] {
     margin-right: auto;
   }
 
+  .sm\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .sm\:mt-5 {
     margin-top: 1.25rem;
   }
 
+  .sm\:ml-20 {
+    margin-left: 5rem;
+  }
+
+  .sm\:mr-10 {
+    margin-right: 2.5rem;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:h-72 {
     height: 18rem;
+  }
+
+  .sm\:h-5 {
+    height: 1.25rem;
+  }
+
+  .sm\:w-5\/6 {
+    width: 83.333333%;
   }
 
   .sm\:max-w-xl {
@@ -1893,6 +1939,46 @@ div[aria-label='Status message'] {
 
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .sm\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sm\:p-0 {
+    padding: 0px;
+  }
+
+  .sm\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .sm\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .sm\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .sm\:text-left {
+    text-align: left;
   }
 
   .sm\:text-center {
@@ -1907,6 +1993,11 @@ div[aria-label='Status message'] {
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 
@@ -1980,6 +2071,10 @@ div[aria-label='Status message'] {
     margin-left: 10rem;
   }
 
+  .lg\:ml-80 {
+    margin-left: 20rem;
+  }
+
   .lg\:h-16 {
     height: 4rem;
   }
@@ -2016,6 +2111,10 @@ div[aria-label='Status message'] {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .lg\:p-3 {
     padding: 0.75rem;
   }
@@ -2043,6 +2142,11 @@ div[aria-label='Status message'] {
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .lg\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .lg\:pr-32 {
@@ -2103,6 +2207,10 @@ div[aria-label='Status message'] {
 
   .xl\:ml-\[36rem\] {
     margin-left: 36rem;
+  }
+
+  .xl\:flex {
+    display: flex;
   }
 
   .xl\:h-20 {
